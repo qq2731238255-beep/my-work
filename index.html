@@ -3,273 +3,300 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FrontierLink Technologies | Future of Connectivity</title>
+<title>FrontierLink Technologies | Smart Communication Engineering</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "primary": "#135bec",
-                "background-light": "#f6f6f8",
-                "background-dark": "#101622",
-              },
-              fontFamily: {
-                "display": ["Inter"]
-              },
-              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
             },
-          },
         }
     </script>
 <style>
-        body { font-family: 'Inter', sans-serif; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
-<div class="relative flex min-h-screen flex-col overflow-x-hidden">
-<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
-<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-20 py-4 sticky top-0 z-50">
 <div class="flex items-center gap-8">
-<div class="flex items-center gap-3">
-<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
-<span class="material-symbols-outlined">polyline</span>
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">hub</span>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">FrontierLink</h2>
 </div>
-<h2 class="text-xl font-bold tracking-tight">FrontierLink</h2>
-</div>
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#wearables">Wearables</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#eyewear">Smart Eyewear</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#engineering">Engineering</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#oem">OEM</a>
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">About Us</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Our Team</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Our Product</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">News</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">After-sales Service</a>
 </nav>
 </div>
-<div class="flex items-center gap-4">
-<div class="relative hidden sm:block">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
-<input class="h-10 w-64 rounded-lg border-none bg-slate-100 dark:bg-slate-800 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary" placeholder="Search technology..." type="text"/>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-slate-800">
+<div class="text-slate-500 dark:text-slate-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
 </div>
-<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all">
-                        Contact Sales
-                    </button>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-500 dark:placeholder:text-slate-400" placeholder="Search technology..." value=""/>
 </div>
+</label>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all">
+                    Contact Us
+                </button>
 </div>
 </header>
 <main class="flex-1">
-<section class="relative overflow-hidden py-20 px-6">
-<div class="mx-auto max-w-7xl">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<div class="z-10">
-<span class="inline-block rounded-full bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-wider text-primary dark:bg-primary/20 mb-6">
-                                Next-Gen Hardware
-                            </span>
-<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
-                                The Future of <span class="text-primary">Connectivity</span>
-</h1>
-<p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl mb-10">
-                                Engineering the interface between humans and the digital world through high-performance wearables, AR solutions, and custom silicon.
+<!-- Hero Section -->
+<div class="px-6 lg:px-20 py-12 lg:py-24 @container bg-white dark:bg-slate-900/50">
+<div class="flex flex-col gap-10 @[864px]:flex-row items-center">
+<div class="w-full @[864px]:w-1/2 relative">
+<div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800" data-alt="High-tech communication network engineering laboratory setup" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMXoIpgCHbgqQtdClu_Yhgbrdl5YhXvlS4AubAwOUgTiy0ui6rc5NhqVARj5dySubrwh0jH7C-gejq8agQOVU8zmugrQs7v6UdGHHAtXCEjkhi4VasP1seBH27MQ4bZcV1m_NQZrcqrFw0a6UIypQSqE5HePG6HSA8-PB2zBymTRrhZKYdXNbKnu1u0Z5sOoxdF--UdhgmuQBa2N_kUrU_yp3i94DZ2Ih86LYi_lpCpZ5vGjwDNkdUcN6JP30Ix9DeZL-yCTIDov5Y"); background-size: cover; background-position: center;'>
+</div>
+<div class="absolute -bottom-6 -right-6 hidden lg:block p-4 bg-primary text-white rounded-lg shadow-lg">
+<span class="text-xs uppercase tracking-widest font-bold">Innovation Hub</span>
+</div>
+</div>
+<div class="flex flex-col gap-8 @[864px]:w-1/2">
+<div class="flex flex-col gap-4">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight lg:text-6xl">
+                                Communication engineering meets everyday intelligence.
+                            </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-[600px]">
+                                We’re communication engineers who fell in love with making everyday objects smarter. At FrontierLink, the ‘Link’ isn’t just in our name—it’s in every appliance we build.
                             </p>
+</div>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">Explore Products</button>
-<button class="bg-slate-200 dark:bg-slate-800 px-8 py-4 rounded-xl font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">Engineering Edge</button>
-</div>
-</div>
-<div class="relative aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-slate-100 dark:to-slate-900 flex items-center justify-center p-8 overflow-hidden">
-<div class="absolute inset-0 opacity-40 mix-blend-overlay bg-[radial-gradient(circle_at_50%_50%,#135bec_0%,transparent_70%)]"></div>
-<img class="relative z-10 w-full h-full object-contain rounded-2xl shadow-2xl transform rotate-3" data-alt="Modern sleek smartwatch with holographic interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIHnmpRLJthLkyN9xYIhmQlt5ed6ninkyi28ua5uVqIsuY8JaBSkqohXFfD-PVD-szGb1_zR2S85nKGNn4gC4adS3xFaEtqtVHoj6NsuYM3K0LXn6qNxdvNA-uF27boM1_YhxWWolYl2LxDyjby3qROtY5y0F5aHegjZKIgOrPKBHx5EpOO-8z6yo6bz3vIYiZmLsWZQBrxHPfTvEzQ9sexEkt-bM29Pez2wITLAXww09h8oijZTDyr-tep25Tzrjp3YPDQXLn5xGz"/>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="wearables">
-<div class="mx-auto max-w-7xl px-6">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-2xl">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Precision Wearables</h2>
-<p class="text-slate-600 dark:text-slate-400">Advanced biometric tracking combined with timeless aesthetics. Our watches don't just tell time—they monitor your vital signs in real-time.</p>
-</div>
-<div class="flex gap-2">
-<button class="p-2 rounded-full border border-slate-300 dark:border-slate-700 hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">chevron_left</span></button>
-<button class="p-2 rounded-full border border-slate-300 dark:border-slate-700 hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined">chevron_right</span></button>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group bg-white dark:bg-slate-800 p-4 rounded-3xl shadow-sm hover:shadow-xl transition-all">
-<div class="h-64 rounded-2xl bg-slate-100 dark:bg-slate-700 mb-6 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Frontier Watch Pro in midnight black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP_s32qxueGqJ_mUXar_a7vI5smmVvjgkohFcvRV-1qWEYmzMQC1LCOQKBwfvixL8HhGPehe4LtQgtmmGYN-0-L0vaFYQoRywC4Do_V8Gdl4hcdoRGKYccNnuQZIqx7fzaYxHxweTtIqR9zPjesW2q3vhqnT_AC5jBmn8eDv0KOPi9LshxEytl0lUSo1MUnCJTEn1xFwDmBAHm5K-IB0ueZwXlSSdxGZCpLn4hB-LCvJ49i8Wmu_UkYoq8fQuOFI-_2-MLNO2YuPi7"/>
-</div>
-<div class="px-2 pb-4">
-<h3 class="text-xl font-bold mb-2">Frontier Watch Pro</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Clinical-grade ECG, SpO2, and 7-day battery life for elite performers.</p>
-<button class="w-full bg-slate-100 dark:bg-slate-700 py-3 rounded-xl text-sm font-bold group-hover:bg-primary group-hover:text-white transition-colors">View Tech Specs</button>
-</div>
-</div>
-<div class="group bg-white dark:bg-slate-800 p-4 rounded-3xl shadow-sm hover:shadow-xl transition-all">
-<div class="h-64 rounded-2xl bg-slate-100 dark:bg-slate-700 mb-6 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Active Bio-Sensor slim wearable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuFjvKmOw7m92TkUF3EAZ0HnWBY55mXoeObRKfnz74nCKsfm5nWkNQIZ7ZRJrhLldbtCF3tO0IDiIhBhPLu0Un8nohkNF4fvA-Ot6ZssjqFiIAXN29aG9ZjQlCmXV3LnNoLJhoEczfA7w-NzO_34DGoVrgIwm7PfSqIAMiuWKHYhPe4BCZweEj6vyd81vAJvPqKhY1wmj4UdOFLmT4j2nPb9TNdRBJYzgVXw2gNduMuMSH5oyKo74fiKWiRly5fHsgKxdd6taLxFgs"/>
-</div>
-<div class="px-2 pb-4">
-<h3 class="text-xl font-bold mb-2">Active Bio-Band</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Minimalist design with maximum insight. Perfect for athletes.</p>
-<button class="w-full bg-slate-100 dark:bg-slate-700 py-3 rounded-xl text-sm font-bold group-hover:bg-primary group-hover:text-white transition-colors">View Tech Specs</button>
-</div>
-</div>
-<div class="group bg-white dark:bg-slate-800 p-4 rounded-3xl shadow-sm hover:shadow-xl transition-all">
-<div class="h-64 rounded-2xl bg-slate-100 dark:bg-slate-700 mb-6 overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Zenith Health Ring in silver finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA5F-g6g1XxBHmC8X1mEK4Q63HmYMGDzrCvGZCKCKHNMqs99Biw54ZFZMb3FFefZVWR0uT3ceuqaitCAtUcAASZUJwxU5tdhr91LrpxJ562a1zaUk19CYZ7sY46GN635R-aNhHNAYFc5XCrjRM8KNmmmmrrVUomTPGejR--CSiySucmMPHYM1B8Gk2vCgrcegk433IUy0qITK094jUoW5a798POo6jHLnQTMk0MzIa0ng7xLV4NeflhFs3JRvux_3oyt40ajBwzfuo"/>
-</div>
-<div class="px-2 pb-4">
-<h3 class="text-xl font-bold mb-2">Zenith Smart Ring</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6">Invisible technology. Sleep and recovery tracking in a premium titanium ring.</p>
-<button class="w-full bg-slate-100 dark:bg-slate-700 py-3 rounded-xl text-sm font-bold group-hover:bg-primary group-hover:text-white transition-colors">View Tech Specs</button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">
+                                Explore Products
+                            </button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+                                Learn More
+                            </button>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section class="py-24" id="eyewear">
-<div class="mx-auto max-w-7xl px-6">
-<div class="bg-primary rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-12 overflow-hidden relative">
-<div class="absolute right-0 top-0 w-1/3 h-full bg-white/10 blur-[100px] rounded-full"></div>
-<div class="flex-1 text-white">
-<span class="text-primary-200 font-bold text-sm tracking-widest uppercase">Augmented Reality</span>
-<h2 class="text-4xl md:text-6xl font-black mt-4 mb-8">Sight AR Glasses</h2>
-<ul class="space-y-6">
-<li class="flex items-start gap-4">
-<div class="h-8 w-8 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">visibility</span>
+<!-- Flagship Devices -->
+<div class="px-6 lg:px-20 py-16 @container">
+<div class="flex flex-col gap-4 mb-12">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Innovation in Hand</span>
+<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight lg:text-4xl">
+                        Our Flagship Smart Devices
+                    </h2>
+<p class="text-slate-600 dark:text-slate-400 text-base max-w-[720px]">
+                        Experience the next frontier of wearable and home technology designed for seamless integration into your lifestyle.
+                    </p>
 </div>
-<div>
-<h4 class="font-bold text-lg">Retina-Grade Optics</h4>
-<p class="text-primary-100 text-sm">2K per eye waveguide display with 1000 nits brightness.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product 1: FrontierWatch -->
+<div class="group flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden" data-alt="Modern smartwatch showing health monitoring data interface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFuETobt7_z7VeFytl-CW09lpmHLZzNwsHkzxLKOkqn9rHE0JhmvaExqHAOw2pwpks4JAOX0_l-JvKGg0woKDXUGbu01vPJzcZDYjTUZi6iM5GZk6kj1DG0cHiNBltEE8hrIKvHw1rzg401wzx4FSUqLPQ_QzjI8pwdV_8JII1958d8w6ETxtjOlw3mGpCjJH13shzHnaUh2OajBs28TrpW5Zoo29qC6ffjeNgsNysjDLwCrT59JRI7HY4K_PGwVgGeHoH2Mw_i-v-");'>
 </div>
-</li>
-<li class="flex items-start gap-4">
-<div class="h-8 w-8 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">weight</span>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">FrontierWatch Series</h3>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
-<div>
-<h4 class="font-bold text-lg">Featherlight Design</h4>
-<p class="text-primary-100 text-sm">Weighing only 75g, designed for all-day comfort.</p>
-</div>
-</li>
-<li class="flex items-start gap-4">
-<div class="h-8 w-8 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-white">bolt</span>
-</div>
-<div>
-<h4 class="font-bold text-lg">Instant Sync</h4>
-<p class="text-primary-100 text-sm">Seamless integration with FrontierLink ecosystem and mobile devices.</p>
-</div>
-</li>
-</ul>
-<button class="mt-12 bg-white text-primary px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform">Pre-order Now</button>
-</div>
-<div class="flex-1 relative group">
-<img class="rounded-2xl shadow-2xl z-10 relative" data-alt="Futuristic augmented reality smart glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv5VohAbv2YWOyvFt76HiZW35Y7YY6vao6T_OO4ZC-vB3DtQu7DXKXQYs6_YgEr3REpPaFH4oJWQYGHj9YDm-36HO5JgrZGpZilbGE8s3fxCqub-SzuCZyIGjCFzMmorxSx9vbO7q-IV-O44O3HE1CJrW-iFyiF4AOywZx6byUx9kfbcHERo-VOvA7arY32QF2ngdvRVfLVYSJmV8WKlLUQU6o-HSdZXvY3blzBfl2pjChGYxnKmFPonoiihSTFyj43Wbu2KfVpd0Z"/>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-normal">
+                                Advanced health monitoring and instant communication hub on your wrist. Built with enterprise-grade security.
+                            </p>
 </div>
 </div>
+<!-- Product 2: LinkView Glasses -->
+<div class="group flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden" data-alt="Futuristic smart glasses with heads-up display and augmented reality" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQFs0odp9KldlbEZ4YkO9-8vxdr9kuTtjopY1bhkC3TWB2sl50_mbNefjq6NJyQDhbsAdVVfY8ahTIfVzHqYwHfK6WWT-kHtqaLJlOC54Xw3ZsmGDWh-YtnZNRdPWD49eNKt5z1fvy1RLyuJ2QvP9GiSpvODrwnFQATdbTu33Ske9N3JvOOIez1x4C6gCkh07VXzOSsh5VFdeH64SMdYytc3MZ_w_wG-W2VL-AHEYnxqJ0vMYarm6GX_9wfpRzeGeFActjx_HpSyd8");'>
 </div>
-</section>
-<section class="py-24 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800" id="engineering">
-<div class="mx-auto max-w-7xl px-6">
-<div class="text-center mb-16">
-<h2 class="text-4xl font-black mb-4">Our Engineering Edge</h2>
-<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">We don't just build products; we build the foundational technologies that power them.</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">LinkView Smart Glasses</h3>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700">
-<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-3xl">memory</span>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-normal">
+                                Augmented reality overlays and hands-free connectivity for the modern professional. Redefining mobile productivity.
+                            </p>
 </div>
-<h3 class="text-xl font-bold mb-4">Custom Silicon</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Proprietary F1 chips optimized for ultra-low power consumption and high-speed data processing in tiny form factors.</p>
-<a class="text-primary font-bold text-sm flex items-center gap-2" href="#">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
 </div>
-<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700">
-<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-3xl">hub</span>
+<!-- Product 3: Guardian Smart Lock -->
+<div class="group flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden" data-alt="High-tech biometric door lock on a modern door" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnASTGnMRuSOGOVNUGuLaSyf5iltM7n9Uup58x46j6KIxGSxTpWWq5soHhiP5c_YwHBfGOe4hg446oZI9PirQmRhrqjlXuReB5gzyJCabs4igfaSc4zTciT3Yu3XBUcNstZdeBgNs4bvMrjsas1t7JupvQfaE0s2MawLsIgAR32ePmKb2yupK0cKFyDjO2-xrJqhAEu2rjehA2Y5WTo7g82BI0ticcyDl0l4-wD3BpuTth4ZjUQeljk-8mBmnm2sjUi1dExdBjqNmf");'>
 </div>
-<h3 class="text-xl font-bold mb-4">Matter/Thread Certified</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Full compliance with global connectivity standards, ensuring seamless interoperability across the smart home ecosystem.</p>
-<a class="text-primary font-bold text-sm flex items-center gap-2" href="#">Protocol Specs <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Guardian Smart Lock</h3>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </div>
-<div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700" id="oem">
-<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
-</div>
-<h3 class="text-xl font-bold mb-4">OEM Services</h3>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">Scale your hardware vision with our world-class manufacturing, design, and firmware engineering partners.</p>
-<a class="text-primary font-bold text-sm flex items-center gap-2" href="#">Partner with us <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-normal">
+                                Secure your perimeter with advanced biometric entry and real-time remote access control via encrypted link.
+                            </p>
 </div>
 </div>
 </div>
-</section>
-</main>
-<footer class="bg-white dark:bg-slate-900 pt-20 pb-10 border-t border-slate-200 dark:border-slate-800">
-<div class="mx-auto max-w-7xl px-6">
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-20">
-<div class="col-span-2">
-<div class="flex items-center gap-3 mb-6">
-<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
-<span class="material-symbols-outlined">polyline</span>
 </div>
-<h2 class="text-xl font-bold tracking-tight">FrontierLink</h2>
+<!-- Core Values Section -->
+<div class="px-6 lg:px-20 py-20 bg-white dark:bg-slate-900/50">
+<div class="flex flex-col gap-4 mb-12 text-center items-center">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Our Foundation</span>
+<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight lg:text-4xl">Core Engineering Values</h2>
+<div class="w-16 h-1 bg-primary rounded-full mt-2"></div>
 </div>
-<p class="text-slate-500 dark:text-slate-400 max-w-xs mb-8">
-                            Pushing the boundaries of wearable technology and human-machine interaction through relentless engineering innovation.
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Reliability First</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            We test connections where others assume stability. Every module undergoes real-world stress tests—because your morning coffee shouldn’t fail due to a weak signal.
                         </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined text-xl">language</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined text-xl">rss_feed</span>
-</a>
 </div>
+<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">touch_app</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">User-Centric Simplicity</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            If setup takes more than 3 taps, we redesign. Technology should serve you quietly—not demand your attention.
+                        </p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Responsible Innovation</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            We add smart features only when they solve real problems. And we design for longevity: low-power chips, repairable modules, recyclable packaging.
+                        </p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Partnership Mindset</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            We listen first—whether to users reporting issues, or partners building with our modules. Your feedback shapes our next iteration.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Company Photography & Team Section -->
+<div class="px-6 lg:px-20 py-20 bg-background-light dark:bg-background-dark">
+<!-- Environment Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
+<div class="aspect-video lg:aspect-square rounded-xl bg-cover bg-center shadow-md overflow-hidden" data-alt="High-tech engineering lab with circuits and oscilloscopes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCXqjRr3GRWmQvJh0qcR-yckVKSeZg_9leYjiivFNehsq9PduZwLa6pNkxY6-qATnOPi6xWiCtZWw7y1JgG2OmsEqB8KjXqnFOAnztlDvrQYNDG_XKqGi0VAdEoSg7AaYR5mD2v8EQU2O8VjQC6kTIFu4Kixdez42qDz0U2DHSk-Wacv4zY9dkuZzFImUkqVUfgPQ-98WcG2dTK-j15lzLj_6CLTSPt6noB4AEZk7i3sQxCbRIXyXC7KpG-LSI0GZS6xPjBWPnbpR8");'></div>
+<div class="aspect-video lg:aspect-square rounded-xl bg-cover bg-center shadow-md overflow-hidden lg:mt-8" data-alt="Modern collaborative office space" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSYsoVdI4E6320T199Ixd2gOdG0I9NYIUVkyMncA29uusVLRwbpk9oKW88aEqG--i2au6pmhFGg4YtdgANeouEiBx9hP9J1s7Gpxh6i46CMwYrpgFIvkQe-K1HrCsQbHJ_dSwspJvr2UQ6BthiK25EyqnxiwAaZRwiLV_jVKwmgxUCdC9s-WD447Wm37v9LF0fCSKhcbFhK3ilKydc-I3Wx8fI57qOgliM-qpniyD79tOROl6nbB5jKfDfiYsiGBckz0u0PFHva0ga");'></div>
+<div class="aspect-video lg:aspect-square rounded-xl bg-cover bg-center shadow-md overflow-hidden" data-alt="Engineer working on hardware prototype" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5hY1ButPCCUoGFTwQLHU2H41XViKwRv-S_pQAWdof1hTCX7UJ49hnf00oBkX1DGZCFetxr7DoWZkjFQQg_5ncJUCwljW-xoX2vagf3XN1J-IgOZ5XMQHGg_nMeYGwecF5dc2ViNtnj8rDvreN4KQAjZzKpHEEkSAGuFaAim4IB0A9qfmWO2mhi_OY7kMjRKCPOfG5GhybmsxeVYNaxNHRt-6GlyJcRFQIHfzHJIizctyw0EDsJf73m7gyitYPsVUSbp6IY6_GlQNj");'></div>
+</div>
+<!-- Team Intro -->
+</div>
+<!-- Stats Section -->
+<div class="px-6 lg:px-20 py-16 bg-primary/5 dark:bg-primary/10">
+<div class="flex flex-wrap gap-6">
+<div class="flex min-w-[240px] flex-1 flex-col gap-3 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Devices Connected</p>
+<p class="text-slate-900 dark:text-white text-4xl font-black">2M+</p>
+</div>
+<div class="flex min-w-[240px] flex-1 flex-col gap-3 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">public</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Countries Served</p>
+<p class="text-slate-900 dark:text-white text-4xl font-black">45+</p>
+</div>
+<div class="flex min-w-[240px] flex-1 flex-col gap-3 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">description</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Patents Filed</p>
+<p class="text-slate-900 dark:text-white text-4xl font-black">120+</p>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="px-6 lg:px-20 py-20 text-center">
+<div class="max-w-3xl mx-auto flex flex-col gap-6">
+<h2 class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight">Ready to build the future of connectivity?</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">Join thousands of enterprises and consumers using FrontierLink to bridge the gap between human intent and machine execution.</p>
+<div class="flex justify-center gap-4 mt-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold transition-all flex items-center gap-2">
+                            Start Your Journey <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-2xl">hub</span>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">FrontierLink</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Leading the world in smart communication engineering and connected appliances for a more efficient tomorrow.
+                    </p>
 </div>
 <div>
-<h4 class="font-bold mb-6">Products</h4>
-<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Wearables</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Smart Eyewear</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Health Sensors</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Accessories</a></li>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Quick Links</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Product</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">News Hub</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Service Center</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-bold mb-6">Engineering</h4>
-<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">F1 Silicon</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Connectivity</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">OEM Partners</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Whitepapers</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6">Company</h4>
-<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Company</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
 <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Team</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Newsroom</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press Kit</a></li>
 </ul>
 </div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Newsletter</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Get the latest technology updates directly in your inbox.</p>
+<div class="flex gap-2">
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm flex-1 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
 </div>
-<div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-400">
-<p>© 2024 FrontierLink Technologies Inc. All rights reserved.</p>
-<div class="flex gap-6 mt-4 md:mt-0">
-<a class="hover:text-primary" href="#">Privacy Policy</a>
-<a class="hover:text-primary" href="#">Terms of Service</a>
-<a class="hover:text-primary" href="#">Cookie Settings</a>
 </div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-xs">© 2024 FrontierLink Technologies. All rights reserved.</p>
+<div class="flex gap-6 text-slate-500 dark:text-slate-400 text-xs">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
 </div>
 </div>
 </footer>
+</div>
 </div>
 </body></html>
