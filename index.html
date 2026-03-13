@@ -1,3 +1,4 @@
+@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en"><head>
@@ -8,73 +9,81 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#135bec",
-                        "background-light": "#ffffff",
-                        "background-dark": "#000000",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>FrontyrLync Technologies | Smart Communication Engineering</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+@@ -25,402 +25,135 @@
+            },
+        }
+    </script>
 <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
 
-        /* Floating Animation */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
+        /* Floating Animation */
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
 
-        /* Enhanced Reveal on Scroll */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px) scale(0.95);
-            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
-            will-change: transform, opacity;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
+        /* Enhanced Reveal on Scroll */
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
 
-        /* Staggered children reveal */
-        .stagger-container .reveal {
-            transition-delay: calc(var(--order) * 100ms);
-        }
+        /* Staggered children reveal */
+        .stagger-container .reveal {
+            transition-delay: calc(var(--order) * 100ms);
+        }
 
-        /* Parallax effect for hero image */
-        .parallax-target {
-            transition: transform 0.2s linear;
-        }
+        /* Parallax effect for hero image */
+        .parallax-target {
+            transition: transform 0.2s linear;
+        }
 
-        /* Premium hover effects */
-        .product-card {
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .product-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-        }
-    </style>
+        /* Premium hover effects */
+        .product-card {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0) scale(1); }
+        .stagger-container .reveal { transition-delay: calc(var(--order) * 100ms); }
+        .parallax-target { transition: transform 0.2s linear; }
+        .product-card { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
+    </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
 <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
@@ -105,8 +114,8 @@
 </div>
 </label>
 <button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">
-                    Contact
-                </button>
+                    Contact
+                </button>
 </div>
 </header>
 <main class="flex-1">
@@ -120,19 +129,19 @@
 <div class="flex flex-col gap-10 @[864px]:w-1/2">
 <div class="flex flex-col gap-6">
 <h1 class="text-slate-900 dark:text-white text-5xl font-black leading-[1.1] tracking-tighter lg:text-7xl">
-                                Engineering intelligence into the everyday.
-                            </h1>
+                                Engineering intelligence into the everyday.
+                            </h1>
 <p class="text-slate-500 dark:text-slate-400 text-xl leading-relaxed max-w-[540px]">
-                                We bridge the gap between complex communication engineering and seamless user experiences. The ‘Link’ is in everything we build.
-                            </p>
+                                We bridge the gap between complex communication engineering and seamless user experiences. The ‘Link’ is in everything we build.
+                            </p>
 </div>
 <div class="flex flex-wrap gap-5">
 <button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-base font-bold hover:shadow-2xl hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95">
-                                Explore Products
-                            </button>
+                                Explore Products
+                            </button>
 <button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">
-                                Learn More
-                            </button>
+                                Learn More
+                            </button>
 </div>
 </div>
 </div>
@@ -142,11 +151,11 @@
 <div class="flex flex-col gap-4 mb-20 reveal">
 <span class="text-primary font-bold tracking-[0.25em] uppercase text-[10px]">The Collection</span>
 <h2 class="text-slate-900 dark:text-white text-4xl font-black leading-tight lg:text-5xl tracking-tight">
-                        Flagship Devices
-                    </h2>
+                        Flagship Devices
+                    </h2>
 <p class="text-slate-500 dark:text-slate-400 text-lg max-w-[680px]">
-                        Technology that disappears into your lifestyle while empowering your every move.
-                    </p>
+                        Technology that disappears into your lifestyle while empowering your every move.
+                    </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 stagger-container">
 <!-- Product 1: FrontierWatch -->
@@ -159,8 +168,8 @@
 <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </div>
 <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                Advanced health monitoring and instant communication hub on your wrist. Enterprise-grade security.
-                            </p>
+                                Advanced health monitoring and instant communication hub on your wrist. Enterprise-grade security.
+                            </p>
 </div>
 </div>
 <!-- Product 2: LinkView Glasses -->
@@ -173,8 +182,8 @@
 <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </div>
 <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                Augmented reality overlays and hands-free connectivity for the modern professional.
-                            </p>
+                                Augmented reality overlays and hands-free connectivity for the modern professional.
+                            </p>
 </div>
 </div>
 <!-- Product 3: Guardian Smart Lock -->
@@ -187,8 +196,8 @@
 <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </div>
 <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                Secure your perimeter with advanced biometric entry and encrypted remote access control.
-                            </p>
+                                Secure your perimeter with advanced biometric entry and encrypted remote access control.
+                            </p>
 </div>
 </div>
 </div>
@@ -206,8 +215,8 @@
 </div>
 <h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Reliability First</h3>
 <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-                            We test connections where others assume stability. Every module undergoes real-world stress tests.
-                        </p>
+                            We test connections where others assume stability. Every module undergoes real-world stress tests.
+                        </p>
 </div>
 <div class="flex flex-col gap-6 p-12 rounded-[2rem] bg-slate-50 dark:bg-slate-950 transition-all hover:bg-slate-100 dark:hover:bg-slate-900 hover:scale-[1.03] reveal" style="--order: 2">
 <div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
@@ -215,8 +224,8 @@
 </div>
 <h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">User-Centric Simplicity</h3>
 <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-                            If setup takes more than 3 taps, we redesign. Technology should serve you quietly.
-                        </p>
+                            If setup takes more than 3 taps, we redesign. Technology should serve you quietly.
+                        </p>
 </div>
 <div class="flex flex-col gap-6 p-12 rounded-[2rem] bg-slate-50 dark:bg-slate-950 transition-all hover:bg-slate-100 dark:hover:bg-slate-900 hover:scale-[1.03] reveal" style="--order: 3">
 <div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
@@ -224,8 +233,8 @@
 </div>
 <h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Responsible Innovation</h3>
 <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-                            We add smart features only when they solve real problems. Longevity is a key feature.
-                        </p>
+                            We add smart features only when they solve real problems. Longevity is a key feature.
+                        </p>
 </div>
 <div class="flex flex-col gap-6 p-12 rounded-[2rem] bg-slate-50 dark:bg-slate-950 transition-all hover:bg-slate-100 dark:hover:bg-slate-900 hover:scale-[1.03] reveal" style="--order: 4">
 <div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
@@ -233,8 +242,41 @@
 </div>
 <h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Partnership Mindset</h3>
 <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-                            We listen first. Whether to users reporting issues, or partners building with our modules.
-                        </p>
+                            We listen first. Whether to users reporting issues, or partners building with our modules.
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 sticky top-0 z-50">
+        <div class="flex items-center gap-10">
+            <div class="flex items-center gap-4 text-primary group cursor-pointer">
+                <span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
+                <h2 class="text-slate-900 dark:text-white text-2xl font-black leading-tight tracking-tighter">FrontyrLync</h2>
+            </div>
+            <nav class="hidden xl:flex items-center gap-8">
+                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Home</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">About Us</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Team</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Product</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">News</a>
+            </nav>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+            <button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">Contact</button>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <div class="px-6 lg:px-20 py-20 lg:py-40 @container bg-white dark:bg-black overflow-hidden reveal">
+            <div class="flex flex-col gap-16 @[864px]:flex-row items-center">
+                <div class="w-full @[864px]:w-1/2 relative">
+                    <div class="aspect-square w-full rounded-[2.5rem] overflow-hidden bg-[#F5F5F7] dark:bg-slate-950 flex items-center justify-center animate-float parallax-target" id="hero-parallax" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiMz1k3HrTJmNe5dT9RmRTcD1MEiVMm2wnYi1w2GliCuTzIgumQtjujHspCtCsfaPorj96Rgbcp_WOSmMGzs7XIgAbrhIhEekgU-uuO7oWf-C6SRkJPeeHhxYcOLfq2EjFh39kTyDYnn2LOP_B-QpKgt59HK9SOzatgxbUhPtEiqOVk4qDmxHibrpi2t7Rf2Wg7BpUAobo15CG7BSFl_EWfYVxp7QkALxZ21e5IQ8g_XTrMJtmiwcih1LVykriDMkEypLt2Qt0Twbj"); background-size: cover; background-position: center;'>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-10 @[864px]:w-1/2">
+                    <div class="flex flex-col gap-6">
+                        <h1 class="text-slate-900 dark:text-white text-5xl font-black leading-[1.1] tracking-tighter lg:text-7xl">
+                            Engineering intelligence into the everyday.
+                        </h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-xl leading-relaxed max-w-[540px]">
+                            We bridge the gap between complex communication engineering and seamless user experiences. The ‘Lync’ is in everything we build.
+                        </p>
 </div>
 </div>
 </div>
@@ -243,11 +285,11 @@
 <div class="flex flex-col gap-4 mb-20 reveal">
 <span class="text-primary font-bold tracking-[0.25em] uppercase text-[10px]">Lifestyle</span>
 <h2 class="text-slate-900 dark:text-white text-4xl font-black leading-tight lg:text-5xl tracking-tight">
-                        Our Environment
-                    </h2>
+                        Our Environment
+                    </h2>
 <p class="text-slate-500 dark:text-slate-400 text-lg max-w-[680px]">
-                        The space where innovation meets inspiration. Designed for focus, collaboration, and well-being.
-                    </p>
+                        The space where innovation meets inspiration. Designed for focus, collaboration, and well-being.
+                    </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square lg:col-span-2 reveal" style="--order: 1">
@@ -306,7 +348,7 @@
 <p class="text-slate-500 dark:text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">Join thousands of enterprises and consumers using FrontierLink to bridge the gap between intent and execution.</p>
 <div class="flex justify-center gap-6 mt-4">
 <button class="bg-primary hover:scale-110 active:scale-95 text-white px-10 py-5 rounded-full font-bold transition-all text-lg flex items-center gap-3 shadow-2xl shadow-primary/40">
-                            Get Started <span class="material-symbols-outlined">trending_flat</span>
+                            Get Started <span class="material-symbols-outlined">trending_flat</span>
 </button>
 </div>
 </div>
@@ -321,8 +363,8 @@
 <h2 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tighter">FrontierLink</h2>
 </div>
 <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
-                        Leading the world in smart communication engineering and connected appliances for an efficient tomorrow.
-                    </p>
+                        Leading the world in smart communication engineering and connected appliances for an efficient tomorrow.
+                    </p>
 </div>
 <div>
 <h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Quick Links</h4>
@@ -359,68 +401,127 @@
 </div>
 </div>
 </footer>
+                    </div>
+                    <div class="flex flex-wrap gap-5">
+                        <button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-base font-bold hover:shadow-2xl hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95">Explore Products</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-6 lg:px-20 py-32 @container bg-slate-50 dark:bg-[#080808]">
+            <div class="flex flex-col gap-4 mb-20 reveal">
+                <span class="text-primary font-bold tracking-[0.25em] uppercase text-[10px]">The Collection</span>
+                <h2 class="text-slate-900 dark:text-white text-4xl font-black leading-tight lg:text-5xl tracking-tight">Flagship Devices</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 stagger-container">
+                <div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 1">
+                    <div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.2s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFuETobt7_z7VeFytl-CW09lpmHLZzNwsHkzxLKOkqn9rHE0JhmvaExqHAOw2pwpks4JAOX0_l-JvKGg0woKDXUGbu01vPJzcZDYjTUZi6iM5GZk6kj1DG0cHiNBltEE8hrIKvHw1rzg401wzx4FSUqLPQ_QzjI8pwdV_8JII1958d8w6ETxtjOlw3mGpCjJH13shzHnaUh2OajBs28TrpW5Zoo29qC6ffjeNgsNysjDLwCrT59JRI7HY4K_PGwVgGeHoH2Mw_i-v-");'></div>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">FrontyrWatch</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Advanced health monitoring and instant communication hub.</p>
+                    </div>
+                </div>
+                <div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 2">
+                    <div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.5s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQFs0odp9KldlbEZ4YkO9-8vxdr9kuTtjopY1bhkC3TWB2sl50_mbNefjq6NJyQDhbsAdVVfY8ahTIfVzHqYwHfK6WWT-kHtqaLJlOC54Xw3ZsmGDWh-YtnZNRdPWD49eNKt5z1fvy1RLyuJ2QvP9GiSpvODrwnFQATdbTu33Ske9N3JvOOIez1x4C6gCkh07VXzOSsh5VFdeH64SMdYytc3MZ_w_wG-W2VL-AHEYnxqJ0vMYarm6GX_9wfpRzeGeFActjx_HpSyd8");'></div>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">LyncView</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Augmented reality overlays and hands-free connectivity.</p>
+                    </div>
+                </div>
+                <div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 3">
+                    <div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.8s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnASTGnMRuSOGOVNUGuLaSyf5iltM7n9Uup58x46j6KIxGSxTpWWq5soHhiP5c_YwHBfGOe4hg446oZI9PirQmRhrqjlXuReB5gzyJCabs4igfaSc4zTciT3Yu3XBUcNstZdeBgNs4bvMrjsas1t7JupvQfaE0s2MawLsIgAR32ePmKb2yupK0cKFyDjO2-xrJqhAEu2rjehA2Y5WTo7g82BI0ticcyDl0l4-wD3BpuTth4ZjUQeljk-8mBmnm2sjUi1dExdBjqNmf");'></div>
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">Guardian</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Secure your perimeter with advanced biometric entry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-6 lg:px-20 py-40 text-center bg-white dark:bg-black">
+            <div class="max-w-4xl mx-auto flex flex-col gap-10 reveal">
+                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.05] tracking-tighter">Ready to build the future of connectivity?</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-xl max-w-2xl mx-auto">Join thousands using FrontyrLync to bridge the gap between intent and execution.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-black border-t border-slate-100 dark:border-slate-900 px-6 lg:px-20 py-20">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4 text-primary">
+                <span class="material-symbols-outlined text-4xl">hub</span>
+                <h2 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tighter">FrontyrLync</h2>
+            </div>
+            <p class="text-slate-400 dark:text-slate-500 text-xs">© 2026 FrontyrLync Technologies. All rights reserved.</p>
+        </div>
+    </footer>
 </div>
 </div>
 <script>
-    // Reveal animation on scroll with Intersection Observer for better performance
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    // Reveal animation on scroll with Intersection Observer for better performance
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                
-                // If it has a counter, start it
-                const counter = entry.target.querySelector('.counter');
-                if (counter) animateCounter(counter);
-            }
-        });
-    }, observerOptions);
+    const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                
+                // If it has a counter, start it
+                const counter = entry.target.querySelector('.counter');
+                if (counter) animateCounter(counter);
+            }
+        });
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("active"); });
+    }, observerOptions);
 
-    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
-    // Simple counter animation
-    function animateCounter(el) {
-        if (el.dataset.animated) return;
-        el.dataset.animated = "true";
-        const target = parseInt(el.dataset.target);
-        const suffix = el.innerText.includes('M') ? 'M+' : '+';
-        let count = 0;
-        const duration = 2000;
-        const startTime = performance.now();
+    // Simple counter animation
+    function animateCounter(el) {
+        if (el.dataset.animated) return;
+        el.dataset.animated = "true";
+        const target = parseInt(el.dataset.target);
+        const suffix = el.innerText.includes('M') ? 'M+' : '+';
+        let count = 0;
+        const duration = 2000;
+        const startTime = performance.now();
 
-        function update(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const currentCount = Math.floor(progress * target);
-            el.innerText = currentCount + suffix;
-            if (progress < 1) requestAnimationFrame(update);
-        }
-        requestAnimationFrame(update);
-    }
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const currentCount = Math.floor(progress * target);
+            el.innerText = currentCount + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+    }
 
-    // Parallax Effect
-    window.addEventListener('mousemove', (e) => {
-        const parallax = document.getElementById('hero-parallax');
-        if (!parallax) return;
-        
-        const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-        const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-        
-        parallax.style.transform = `translate(${moveX}px, ${moveY}px)`;
-    });
+    // Parallax Effect
+    window.addEventListener('mousemove', (e) => {
+        const parallax = document.getElementById('hero-parallax');
+        if (!parallax) return;
+        
+        const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+        const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+        
+        parallax.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
 
-    // Header shadow on scroll
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 10) {
-            header.classList.add('shadow-sm');
-        } else {
-            header.classList.remove('shadow-sm');
-        }
-    });
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 10) {
+            header.classList.add('shadow-sm');
+        } else {
+            header.classList.remove('shadow-sm');
+        }
+    });
 </script>
-</body></html>帮我看看这代码
+</body></html>
+</body>
+</html>
