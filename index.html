@@ -8,19 +8,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>FrontyrLync Technologies | Smart Communication Engineering</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
-@@ -25,402 +25,135 @@
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
             },
         }
     </script>
@@ -34,9 +35,6 @@
         }
 
         /* Floating Animation */
-    <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
@@ -47,7 +45,6 @@
         }
 
         /* Enhanced Reveal on Scroll */
-        .animate-float { animation: float 6s ease-in-out infinite; }
         .reveal {
             opacity: 0;
             transform: translateY(40px) scale(0.95);
@@ -77,11 +74,6 @@
             transform: translateY(-12px) scale(1.02);
             box-shadow: 0 30px 60px rgba(0,0,0,0.12);
         }
-        .reveal.active { opacity: 1; transform: translateY(0) scale(1); }
-        .stagger-container .reveal { transition-delay: calc(var(--order) * 100ms); }
-        .parallax-target { transition: transform 0.2s linear; }
-        .product-card { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .product-card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 30px 60px rgba(0,0,0,0.12); }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
@@ -242,39 +234,6 @@
 <h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Partnership Mindset</h3>
 <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
                             We listen first. Whether to users reporting issues, or partners building with our modules.
-    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 sticky top-0 z-50">
-        <div class="flex items-center gap-10">
-            <div class="flex items-center gap-4 text-primary group cursor-pointer">
-                <span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
-                <h2 class="text-slate-900 dark:text-white text-2xl font-black leading-tight tracking-tighter">FrontyrLync</h2>
-            </div>
-            <nav class="hidden xl:flex items-center gap-8">
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Home</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">About Us</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Team</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Product</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">News</a>
-            </nav>
-        </div>
-        <div class="flex flex-1 justify-end gap-6 items-center">
-            <button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">Contact</button>
-        </div>
-    </header>
-
-    <main class="flex-1">
-        <div class="px-6 lg:px-20 py-20 lg:py-40 @container bg-white dark:bg-black overflow-hidden reveal">
-            <div class="flex flex-col gap-16 @[864px]:flex-row items-center">
-                <div class="w-full @[864px]:w-1/2 relative">
-                    <div class="aspect-square w-full rounded-[2.5rem] overflow-hidden bg-[#F5F5F7] dark:bg-slate-950 flex items-center justify-center animate-float parallax-target" id="hero-parallax" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiMz1k3HrTJmNe5dT9RmRTcD1MEiVMm2wnYi1w2GliCuTzIgumQtjujHspCtCsfaPorj96Rgbcp_WOSmMGzs7XIgAbrhIhEekgU-uuO7oWf-C6SRkJPeeHhxYcOLfq2EjFh39kTyDYnn2LOP_B-QpKgt59HK9SOzatgxbUhPtEiqOVk4qDmxHibrpi2t7Rf2Wg7BpUAobo15CG7BSFl_EWfYVxp7QkALxZ21e5IQ8g_XTrMJtmiwcih1LVykriDMkEypLt2Qt0Twbj"); background-size: cover; background-position: center;'>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-10 @[864px]:w-1/2">
-                    <div class="flex flex-col gap-6">
-                        <h1 class="text-slate-900 dark:text-white text-5xl font-black leading-[1.1] tracking-tighter lg:text-7xl">
-                            Engineering intelligence into the everyday.
-                        </h1>
-                        <p class="text-slate-500 dark:text-slate-400 text-xl leading-relaxed max-w-[540px]">
-                            We bridge the gap between complex communication engineering and seamless user experiences. The ‘Lync’ is in everything we build.
                         </p>
 </div>
 </div>
@@ -292,7 +251,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square lg:col-span-2 reveal" style="--order: 1">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdNO-yOGcc-yYzgjmW7eXvy4sLVF8CGl6rTQxVx6ujx7GuGkaA0ybNkc6nEbqjA_OVH0ZUUJ29nu0V6JE_qTtmiYomNwAC2VnaBx-J9G_w8TR30eph1nE3UcKZDDCkf1xl9ANhHpKqBxOI7YD57s0oSaYY5DdO7eDKFbQBL0RwkV5HCbf2tmCzGzpqIP4guMkx9RrPHe_FmMsbvby7ybxAcYZ3zhQ5TB8Oa-n0nkUu5a0ORZIorGa2XjRHucxzFrtRzc7fdt2Jakit')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-10 left-10">
 <h4 class="text-white text-2xl font-bold">Innovation Lab</h4>
@@ -300,21 +259,21 @@
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square reveal" style="--order: 2">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZb_bCjvrDBlpQ4qTUYw3HUp1siaRrqO2-_bIiQtaqcbSN3IECGqGLKqSCIpcUOydR05wAjw4iAnaxEX-I24C8wCiC9ybDwGRZTACbcw6MiFQVaefBr02sJKf3071EKLq8_MLJW74sPJGrMdvRgtG_CPtWP_obJ5lXLkqayxm0RnFH-ZtvsDm5rROmyWRVF6Qwlr6gmLmT0bLo_QkWo9szkDS9yA1iFjfz0IRQqNwuXhfbsmcjU9eE_Re0yPb8dyFGNxxuoFFV42Am')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-8 left-8">
 <h4 class="text-white text-xl font-bold">Collab Lounge</h4>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square reveal" style="--order: 3">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBD5xom_OZgZnRTE5vLXmFUhX8xZA2stACMwVUC4DBbjq7thEkPCfcyPFkjKdpBo0MuTs4Q5BMOCORIL5vf5SO_QxgXOfqXGnWAHYwW8qTz8WScFbx8xGmNUrN4DGg-iYrp3fC0ta85OWmzoJf3zbo_2fDtkKJKTuG5UMT5TvXpOEIEbsw9Ob-sbcZeSdN7yN0K01Dq9uHyHE9Ls363SvvTRWMrLIS9RiH1QVlZxPxe788LNkNY_wfxu5NDFxYUQJsbPQPvu-tigM_0')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-8 left-8">
 <h4 class="text-white text-xl font-bold">Zen Dining</h4>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square lg:col-span-2 reveal" style="--order: 4">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmHfPChiNH7A14BLPoP5MNNks4GlicDcKEpNELmKIimawT55gtqgiosrq5SFa0D4cXIlBZc3aWPrd9A7mSkPgz0Ezl-bd67RfDSpTzm8WikB827lp-tsHgMsoxG0d2cJn5xZGCKo7-0519Br4dkJ6qR56eR2_Y_o_8OospH4COVhySb7r6MXtQI9n7T_EQMKHpUBRnI6yZjZ36GyXQveIlJo8Wn0ear7mGm8BYpfSOBFKCJPM0ACWMkYXH6R_FljTwa9Oh-C2Vr-iD')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-10 left-10">
 <h4 class="text-white text-2xl font-bold">Design Studio</h4>
@@ -400,61 +359,6 @@
 </div>
 </div>
 </footer>
-                    </div>
-                    <div class="flex flex-wrap gap-5">
-                        <button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-base font-bold hover:shadow-2xl hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95">Explore Products</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="px-6 lg:px-20 py-32 @container bg-slate-50 dark:bg-[#080808]">
-            <div class="flex flex-col gap-4 mb-20 reveal">
-                <span class="text-primary font-bold tracking-[0.25em] uppercase text-[10px]">The Collection</span>
-                <h2 class="text-slate-900 dark:text-white text-4xl font-black leading-tight lg:text-5xl tracking-tight">Flagship Devices</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 stagger-container">
-                <div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 1">
-                    <div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.2s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFuETobt7_z7VeFytl-CW09lpmHLZzNwsHkzxLKOkqn9rHE0JhmvaExqHAOw2pwpks4JAOX0_l-JvKGg0woKDXUGbu01vPJzcZDYjTUZi6iM5GZk6kj1DG0cHiNBltEE8hrIKvHw1rzg401wzx4FSUqLPQ_QzjI8pwdV_8JII1958d8w6ETxtjOlw3mGpCjJH13shzHnaUh2OajBs28TrpW5Zoo29qC6ffjeNgsNysjDLwCrT59JRI7HY4K_PGwVgGeHoH2Mw_i-v-");'></div>
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">FrontyrWatch</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Advanced health monitoring and instant communication hub.</p>
-                    </div>
-                </div>
-                <div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 2">
-                    <div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.5s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQFs0odp9KldlbEZ4YkO9-8vxdr9kuTtjopY1bhkC3TWB2sl50_mbNefjq6NJyQDhbsAdVVfY8ahTIfVzHqYwHfK6WWT-kHtqaLJlOC54Xw3ZsmGDWh-YtnZNRdPWD49eNKt5z1fvy1RLyuJ2QvP9GiSpvODrwnFQATdbTu33Ske9N3JvOOIez1x4C6gCkh07VXzOSsh5VFdeH64SMdYytc3MZ_w_wG-W2VL-AHEYnxqJ0vMYarm6GX_9wfpRzeGeFActjx_HpSyd8");'></div>
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">LyncView</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Augmented reality overlays and hands-free connectivity.</p>
-                    </div>
-                </div>
-                <div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 3">
-                    <div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.8s]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnASTGnMRuSOGOVNUGuLaSyf5iltM7n9Uup58x46j6KIxGSxTpWWq5soHhiP5c_YwHBfGOe4hg446oZI9PirQmRhrqjlXuReB5gzyJCabs4igfaSc4zTciT3Yu3XBUcNstZdeBgNs4bvMrjsas1t7JupvQfaE0s2MawLsIgAR32ePmKb2yupK0cKFyDjO2-xrJqhAEu2rjehA2Y5WTo7g82BI0ticcyDl0l4-wD3BpuTth4ZjUQeljk-8mBmnm2sjUi1dExdBjqNmf");'></div>
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">Guardian</h3>
-                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Secure your perimeter with advanced biometric entry.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="px-6 lg:px-20 py-40 text-center bg-white dark:bg-black">
-            <div class="max-w-4xl mx-auto flex flex-col gap-10 reveal">
-                <h2 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.05] tracking-tighter">Ready to build the future of connectivity?</h2>
-                <p class="text-slate-500 dark:text-slate-400 text-xl max-w-2xl mx-auto">Join thousands using FrontyrLync to bridge the gap between intent and execution.</p>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-white dark:bg-black border-t border-slate-100 dark:border-slate-900 px-6 lg:px-20 py-20">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-4 text-primary">
-                <span class="material-symbols-outlined text-4xl">hub</span>
-                <h2 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tighter">FrontyrLync</h2>
-            </div>
-            <p class="text-slate-400 dark:text-slate-500 text-xs">© 2026 FrontyrLync Technologies. All rights reserved.</p>
-        </div>
-    </footer>
 </div>
 </div>
 <script>
@@ -464,7 +368,6 @@
         rootMargin: "0px 0px -50px 0px"
     };
 
-    const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -475,7 +378,6 @@
                 if (counter) animateCounter(counter);
             }
         });
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("active"); });
     }, observerOptions);
 
     document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
@@ -522,5 +424,3 @@
     });
 </script>
 </body></html>
-</body>
-</html>
