@@ -6,263 +6,327 @@
 <title>FrontierLink Technologies | Smart Communication Engineering</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#135bec",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#101622",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
 <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Enhanced Reveal on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Staggered children reveal */
+        .stagger-container .reveal {
+            transition-delay: calc(var(--order) * 100ms);
+        }
+
+        /* Parallax effect for hero image */
+        .parallax-target {
+            transition: transform 0.2s linear;
+        }
+
+        /* Premium hover effects */
+        .product-card {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+    </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
 <div class="layout-container flex h-full grow flex-col">
 <!-- Navigation Bar -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-20 py-4 sticky top-0 z-50">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-3 text-primary">
-<span class="material-symbols-outlined text-3xl">hub</span>
-<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">FrontierLink</h2>
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 sticky top-0 z-50">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-4 text-primary group cursor-pointer">
+<span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-black leading-tight tracking-tighter">FrontierLink</h2>
 </div>
-<nav class="hidden xl:flex items-center gap-6">
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="about.html">About Us</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Our Team</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Our Product</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">News</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">After-sales Service</a>
+<nav class="hidden xl:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Home</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">About Us</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Team</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Product</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">News</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">After-sales Service</a>
 </nav>
 </div>
-<div class="flex flex-1 justify-end gap-4 items-center">
-<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
-<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-slate-800">
-<div class="text-slate-500 dark:text-slate-400 flex items-center justify-center pl-3">
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-11 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-slate-100 dark:bg-slate-900">
+<div class="text-slate-400 dark:text-slate-500 flex items-center justify-center pl-4">
 <span class="material-symbols-outlined text-xl">search</span>
 </div>
-<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-500 dark:placeholder:text-slate-400" placeholder="Search technology..." value=""/>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search..." value=""/>
 </div>
 </label>
-<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all">
-                    Contact Us
-                </button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">
+                    Contact
+                </button>
 </div>
 </header>
 <main class="flex-1">
 <!-- Hero Section -->
-<div class="px-6 lg:px-20 py-12 lg:py-24 @container bg-white dark:bg-slate-900/50">
-<div class="flex flex-col gap-10 @[864px]:flex-row items-center">
+<div class="px-6 lg:px-20 py-20 lg:py-40 @container bg-white dark:bg-black overflow-hidden reveal">
+<div class="flex flex-col gap-16 @[864px]:flex-row items-center">
 <div class="w-full @[864px]:w-1/2 relative">
-<div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800" data-alt="High-tech communication network engineering laboratory setup" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMXoIpgCHbgqQtdClu_Yhgbrdl5YhXvlS4AubAwOUgTiy0ui6rc5NhqVARj5dySubrwh0jH7C-gejq8agQOVU8zmugrQs7v6UdGHHAtXCEjkhi4VasP1seBH27MQ4bZcV1m_NQZrcqrFw0a6UIypQSqE5HePG6HSA8-PB2zBymTRrhZKYdXNbKnu1u0Z5sOoxdF--UdhgmuQBa2N_kUrU_yp3i94DZ2Ih86LYi_lpCpZ5vGjwDNkdUcN6JP30Ix9DeZL-yCTIDov5Y"); background-size: cover; background-position: center;'>
+<div class="aspect-square w-full rounded-[2.5rem] overflow-hidden bg-[#F5F5F7] dark:bg-slate-950 flex items-center justify-center animate-float parallax-target" data-alt="High-end sleek smart watch with a minimal aesthetic" id="hero-parallax" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiMz1k3HrTJmNe5dT9RmRTcD1MEiVMm2wnYi1w2GliCuTzIgumQtjujHspCtCsfaPorj96Rgbcp_WOSmMGzs7XIgAbrhIhEekgU-uuO7oWf-C6SRkJPeeHhxYcOLfq2EjFh39kTyDYnn2LOP_B-QpKgt59HK9SOzatgxbUhPtEiqOVk4qDmxHibrpi2t7Rf2Wg7BpUAobo15CG7BSFl_EWfYVxp7QkALxZ21e5IQ8g_XTrMJtmiwcih1LVykriDMkEypLt2Qt0Twbj"); background-size: cover; background-position: center;'>
 </div>
-
 </div>
-<div class="flex flex-col gap-8 @[864px]:w-1/2">
-<div class="flex flex-col gap-4">
-<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight lg:text-6xl">
-                                Communication engineering meets everyday intelligence.
-                            </h1>
-<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-[600px]">
-                                We’re communication engineers who fell in love with making everyday objects smarter. At FrontierLink, the ‘Link’ isn’t just in our name—it’s in every appliance we build.
-                            </p>
+<div class="flex flex-col gap-10 @[864px]:w-1/2">
+<div class="flex flex-col gap-6">
+<h1 class="text-slate-900 dark:text-white text-5xl font-black leading-[1.1] tracking-tighter lg:text-7xl">
+                                Engineering intelligence into the everyday.
+                            </h1>
+<p class="text-slate-500 dark:text-slate-400 text-xl leading-relaxed max-w-[540px]">
+                                We bridge the gap between complex communication engineering and seamless user experiences. The ‘Link’ is in everything we build.
+                            </p>
 </div>
-<div class="flex flex-wrap gap-4">
-<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">
-                                Explore Products
-                            </button>
-<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
-                                Learn More
-                            </button>
+<div class="flex flex-wrap gap-5">
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-base font-bold hover:shadow-2xl hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95">
+                                Explore Products
+                            </button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">
+                                Learn More
+                            </button>
 </div>
 </div>
 </div>
 </div>
 <!-- Flagship Devices -->
-<div class="px-6 lg:px-20 py-16 @container">
-<div class="flex flex-col gap-4 mb-12">
-<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Innovation in Hand</span>
-<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight lg:text-4xl">
-                        Our Flagship Smart Devices
-                    </h2>
-<p class="text-slate-600 dark:text-slate-400 text-base max-w-[720px]">
-                        Experience the next frontier of wearable and home technology designed for seamless integration into your lifestyle.
-                    </p>
+<div class="px-6 lg:px-20 py-32 @container bg-slate-50 dark:bg-[#080808]">
+<div class="flex flex-col gap-4 mb-20 reveal">
+<span class="text-primary font-bold tracking-[0.25em] uppercase text-[10px]">The Collection</span>
+<h2 class="text-slate-900 dark:text-white text-4xl font-black leading-tight lg:text-5xl tracking-tight">
+                        Flagship Devices
+                    </h2>
+<p class="text-slate-500 dark:text-slate-400 text-lg max-w-[680px]">
+                        Technology that disappears into your lifestyle while empowering your every move.
+                    </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 stagger-container">
 <!-- Product 1: FrontierWatch -->
-<div class="group flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
-<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden" data-alt="Modern smartwatch showing health monitoring data interface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFuETobt7_z7VeFytl-CW09lpmHLZzNwsHkzxLKOkqn9rHE0JhmvaExqHAOw2pwpks4JAOX0_l-JvKGg0woKDXUGbu01vPJzcZDYjTUZi6iM5GZk6kj1DG0cHiNBltEE8hrIKvHw1rzg401wzx4FSUqLPQ_QzjI8pwdV_8JII1958d8w6ETxtjOlw3mGpCjJH13shzHnaUh2OajBs28TrpW5Zoo29qC6ffjeNgsNysjDLwCrT59JRI7HY4K_PGwVgGeHoH2Mw_i-v-");'>
+<div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 1">
+<div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.2s]" data-alt="Modern smartwatch" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFuETobt7_z7VeFytl-CW09lpmHLZzNwsHkzxLKOkqn9rHE0JhmvaExqHAOw2pwpks4JAOX0_l-JvKGg0woKDXUGbu01vPJzcZDYjTUZi6iM5GZk6kj1DG0cHiNBltEE8hrIKvHw1rzg401wzx4FSUqLPQ_QzjI8pwdV_8JII1958d8w6ETxtjOlw3mGpCjJH13shzHnaUh2OajBs28TrpW5Zoo29qC6ffjeNgsNysjDLwCrT59JRI7HY4K_PGwVgGeHoH2Mw_i-v-");'>
 </div>
-<div class="flex flex-col gap-2">
+<div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<h3 class="text-slate-900 dark:text-white text-xl font-bold">FrontierWatch Series</h3>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">FrontierWatch</h3>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </div>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-normal">
-                                Advanced health monitoring and instant communication hub on your wrist. Built with enterprise-grade security.
-                            </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                Advanced health monitoring and instant communication hub on your wrist. Enterprise-grade security.
+                            </p>
 </div>
 </div>
 <!-- Product 2: LinkView Glasses -->
-<div class="group flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
-<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden" data-alt="Futuristic smart glasses with heads-up display and augmented reality" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQFs0odp9KldlbEZ4YkO9-8vxdr9kuTtjopY1bhkC3TWB2sl50_mbNefjq6NJyQDhbsAdVVfY8ahTIfVzHqYwHfK6WWT-kHtqaLJlOC54Xw3ZsmGDWh-YtnZNRdPWD49eNKt5z1fvy1RLyuJ2QvP9GiSpvODrwnFQATdbTu33Ske9N3JvOOIez1x4C6gCkh07VXzOSsh5VFdeH64SMdYytc3MZ_w_wG-W2VL-AHEYnxqJ0vMYarm6GX_9wfpRzeGeFActjx_HpSyd8");'>
+<div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 2">
+<div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.5s]" data-alt="Smart glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQFs0odp9KldlbEZ4YkO9-8vxdr9kuTtjopY1bhkC3TWB2sl50_mbNefjq6NJyQDhbsAdVVfY8ahTIfVzHqYwHfK6WWT-kHtqaLJlOC54Xw3ZsmGDWh-YtnZNRdPWD49eNKt5z1fvy1RLyuJ2QvP9GiSpvODrwnFQATdbTu33Ske9N3JvOOIez1x4C6gCkh07VXzOSsh5VFdeH64SMdYytc3MZ_w_wG-W2VL-AHEYnxqJ0vMYarm6GX_9wfpRzeGeFActjx_HpSyd8");'>
 </div>
-<div class="flex flex-col gap-2">
+<div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<h3 class="text-slate-900 dark:text-white text-xl font-bold">LinkView Smart Glasses</h3>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">LinkView</h3>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </div>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-normal">
-                                Augmented reality overlays and hands-free connectivity for the modern professional. Redefining mobile productivity.
-                            </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                Augmented reality overlays and hands-free connectivity for the modern professional.
+                            </p>
 </div>
 </div>
 <!-- Product 3: Guardian Smart Lock -->
-<div class="group flex flex-col gap-6 p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all shadow-sm">
-<div class="w-full aspect-video bg-cover bg-center rounded-lg overflow-hidden" data-alt="High-tech biometric door lock on a modern door" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnASTGnMRuSOGOVNUGuLaSyf5iltM7n9Uup58x46j6KIxGSxTpWWq5soHhiP5c_YwHBfGOe4hg446oZI9PirQmRhrqjlXuReB5gzyJCabs4igfaSc4zTciT3Yu3XBUcNstZdeBgNs4bvMrjsas1t7JupvQfaE0s2MawLsIgAR32ePmKb2yupK0cKFyDjO2-xrJqhAEu2rjehA2Y5WTo7g82BI0ticcyDl0l4-wD3BpuTth4ZjUQeljk-8mBmnm2sjUi1dExdBjqNmf");'>
+<div class="product-card group flex flex-col gap-8 p-10 rounded-[2rem] bg-white dark:bg-slate-950 border border-slate-100 dark:border-slate-900 reveal" style="--order: 3">
+<div class="w-full aspect-[4/3] bg-cover bg-center rounded-2xl overflow-hidden animate-float [animation-delay:0.8s]" data-alt="Smart lock" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnASTGnMRuSOGOVNUGuLaSyf5iltM7n9Uup58x46j6KIxGSxTpWWq5soHhiP5c_YwHBfGOe4hg446oZI9PirQmRhrqjlXuReB5gzyJCabs4igfaSc4zTciT3Yu3XBUcNstZdeBgNs4bvMrjsas1t7JupvQfaE0s2MawLsIgAR32ePmKb2yupK0cKFyDjO2-xrJqhAEu2rjehA2Y5WTo7g82BI0ticcyDl0l4-wD3BpuTth4ZjUQeljk-8mBmnm2sjUi1dExdBjqNmf");'>
 </div>
-<div class="flex flex-col gap-2">
+<div class="flex flex-col gap-3">
 <div class="flex items-center justify-between">
-<h3 class="text-slate-900 dark:text-white text-xl font-bold">Guardian Smart Lock</h3>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<h3 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tight">Guardian</h3>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </div>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-normal">
-                                Secure your perimeter with advanced biometric entry and real-time remote access control via encrypted link.
-                            </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                Secure your perimeter with advanced biometric entry and encrypted remote access control.
+                            </p>
 </div>
 </div>
 </div>
 </div>
 <!-- Core Values Section -->
-<div class="px-6 lg:px-20 py-20 bg-white dark:bg-slate-900/50">
-<div class="flex flex-col gap-4 mb-12 text-center items-center">
-<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Our Foundation</span>
-<h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight lg:text-4xl">Core Engineering Values</h2>
-<div class="w-16 h-1 bg-primary rounded-full mt-2"></div>
+<div class="px-6 lg:px-20 py-32 bg-white dark:bg-black">
+<div class="flex flex-col gap-4 mb-20 text-center items-center reveal">
+<span class="text-primary font-bold tracking-[0.25em] uppercase text-[10px]">Principles</span>
+<h2 class="text-slate-900 dark:text-white text-4xl font-black leading-tight lg:text-5xl tracking-tight">Core Values</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
-<span class="material-symbols-outlined">verified_user</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 stagger-container">
+<div class="flex flex-col gap-6 p-12 rounded-[2rem] bg-slate-50 dark:bg-slate-950 transition-all hover:bg-slate-100 dark:hover:bg-slate-900 hover:scale-[1.03] reveal" style="--order: 1">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
 </div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white">Reliability First</h3>
-<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                            We test connections where others assume stability. Every module undergoes real-world stress tests—because your morning coffee shouldn’t fail due to a weak signal.
-                        </p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Reliability First</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                            We test connections where others assume stability. Every module undergoes real-world stress tests.
+                        </p>
 </div>
-<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
-<span class="material-symbols-outlined">touch_app</span>
+<div class="flex flex-col gap-6 p-12 rounded-[2rem] bg-slate-50 dark:bg-slate-950 transition-all hover:bg-slate-100 dark:hover:bg-slate-900 hover:scale-[1.03] reveal" style="--order: 2">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">touch_app</span>
 </div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white">User-Centric Simplicity</h3>
-<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                            If setup takes more than 3 taps, we redesign. Technology should serve you quietly—not demand your attention.
-                        </p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">User-Centric Simplicity</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                            If setup takes more than 3 taps, we redesign. Technology should serve you quietly.
+                        </p>
 </div>
-<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
-<span class="material-symbols-outlined">eco</span>
+<div class="flex flex-col gap-6 p-12 rounded-[2rem] bg-slate-50 dark:bg-slate-950 transition-all hover:bg-slate-100 dark:hover:bg-slate-900 hover:scale-[1.03] reveal" style="--order: 3">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">eco</span>
 </div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white">Responsible Innovation</h3>
-<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                            We add smart features only when they solve real problems. And we design for longevity: low-power chips, repairable modules, recyclable packaging.
-                        </p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Responsible Innovation</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                            We add smart features only when they solve real problems. Longevity is a key feature.
+                        </p>
 </div>
-<div class="flex flex-col gap-4 p-8 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-<div class="size-12 rounded-lg bg-primary text-white flex items-center justify-center">
-<span class="material-symbols-outlined">handshake</span>
+<div class="flex flex-col gap-6 p-12 rounded-[2rem] bg-slate-50 dark:bg-slate-950 transition-all hover:bg-slate-100 dark:hover:bg-slate-900 hover:scale-[1.03] reveal" style="--order: 4">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">handshake</span>
 </div>
-<h3 class="text-xl font-bold text-slate-900 dark:text-white">Partnership Mindset</h3>
-<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                            We listen first—whether to users reporting issues, or partners building with our modules. Your feedback shapes our next iteration.
-                        </p>
-</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">Partnership Mindset</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                            We listen first. Whether to users reporting issues, or partners building with our modules.
+                        </p>
 </div>
 </div>
-<!-- Company Photography & Team Section -->
-<div class="px-6 lg:px-20 py-20 bg-background-light dark:bg-background-dark">
-<!-- Environment Gallery -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
-<div class="aspect-video lg:aspect-square rounded-xl bg-cover bg-center shadow-md overflow-hidden" data-alt="High-tech engineering lab with circuits and oscilloscopes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCXqjRr3GRWmQvJh0qcR-yckVKSeZg_9leYjiivFNehsq9PduZwLa6pNkxY6-qATnOPi6xWiCtZWw7y1JgG2OmsEqB8KjXqnFOAnztlDvrQYNDG_XKqGi0VAdEoSg7AaYR5mD2v8EQU2O8VjQC6kTIFu4Kixdez42qDz0U2DHSk-Wacv4zY9dkuZzFImUkqVUfgPQ-98WcG2dTK-j15lzLj_6CLTSPt6noB4AEZk7i3sQxCbRIXyXC7KpG-LSI0GZS6xPjBWPnbpR8");'></div>
-<div class="aspect-video lg:aspect-square rounded-xl bg-cover bg-center shadow-md overflow-hidden lg:mt-8" data-alt="Modern collaborative office space" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSYsoVdI4E6320T199Ixd2gOdG0I9NYIUVkyMncA29uusVLRwbpk9oKW88aEqG--i2au6pmhFGg4YtdgANeouEiBx9hP9J1s7Gpxh6i46CMwYrpgFIvkQe-K1HrCsQbHJ_dSwspJvr2UQ6BthiK25EyqnxiwAaZRwiLV_jVKwmgxUCdC9s-WD447Wm37v9LF0fCSKhcbFhK3ilKydc-I3Wx8fI57qOgliM-qpniyD79tOROl6nbB5jKfDfiYsiGBckz0u0PFHva0ga");'></div>
-<div class="aspect-video lg:aspect-square rounded-xl bg-cover bg-center shadow-md overflow-hidden" data-alt="Engineer working on hardware prototype" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5hY1ButPCCUoGFTwQLHU2H41XViKwRv-S_pQAWdof1hTCX7UJ49hnf00oBkX1DGZCFetxr7DoWZkjFQQg_5ncJUCwljW-xoX2vagf3XN1J-IgOZ5XMQHGg_nMeYGwecF5dc2ViNtnj8rDvreN4KQAjZzKpHEEkSAGuFaAim4IB0A9qfmWO2mhi_OY7kMjRKCPOfG5GhybmsxeVYNaxNHRt-6GlyJcRFQIHfzHJIizctyw0EDsJf73m7gyitYPsVUSbp6IY6_GlQNj");'></div>
 </div>
-<!-- Team Intro -->
+<!-- Our Environment Section -->
+<div class="px-6 lg:px-20 py-32 bg-slate-50 dark:bg-[#080808]">
+<div class="flex flex-col gap-4 mb-20 reveal">
+<span class="text-primary font-bold tracking-[0.25em] uppercase text-[10px]">Lifestyle</span>
+<h2 class="text-slate-900 dark:text-white text-4xl font-black leading-tight lg:text-5xl tracking-tight">
+                        Our Environment
+                    </h2>
+<p class="text-slate-500 dark:text-slate-400 text-lg max-w-[680px]">
+                        The space where innovation meets inspiration. Designed for focus, collaboration, and well-being.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square lg:col-span-2 reveal" style="--order: 1">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-10 left-10">
+<h4 class="text-white text-2xl font-bold">Innovation Lab</h4>
+<p class="text-white/70 text-sm">Where the future of FrontierLink is engineered.</p>
+</div>Collab Lounge
+</div>
+<div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square reveal" style="--order: 2">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h4 class="text-white text-xl font-bold">Collab Lounge</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square reveal" style="--order: 3">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<h4 class="text-white text-xl font-bold">Zen Dining</h4>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-slate-950 aspect-[4/5] md:aspect-square lg:col-span-2 reveal" style="--order: 4">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-10 left-10">
+<h4 class="text-white text-2xl font-bold">Design Studio</h4>
+<p class="text-white/70 text-sm">Crafting the aesthetics of smart communication.</p>
+</div>
+</div>
+</div>
 </div>
 <!-- Stats Section -->
-<div class="px-6 lg:px-20 py-16 bg-primary/5 dark:bg-primary/10">
-<div class="flex flex-wrap gap-6">
-<div class="flex min-w-[240px] flex-1 flex-col gap-3 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined">devices</span>
+<div class="px-6 lg:px-20 py-24 bg-white dark:bg-black">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 stagger-container">
+<div class="flex flex-col gap-4 p-10 rounded-[2rem] bg-slate-50 dark:bg-slate-950 reveal" style="--order: 1">
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold uppercase tracking-widest">Devices Connected</p>
+<p class="text-slate-900 dark:text-white text-6xl font-black tracking-tighter counter" data-target="2">0M+</p>
 </div>
-<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Devices Connected</p>
-<p class="text-slate-900 dark:text-white text-4xl font-black">2M+</p>
+<div class="flex flex-col gap-4 p-10 rounded-[2rem] bg-slate-50 dark:bg-slate-950 reveal" style="--order: 2">
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold uppercase tracking-widest">Countries Served</p>
+<p class="text-slate-900 dark:text-white text-6xl font-black tracking-tighter counter" data-target="45">0+</p>
 </div>
-<div class="flex min-w-[240px] flex-1 flex-col gap-3 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined">public</span>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Countries Served</p>
-<p class="text-slate-900 dark:text-white text-4xl font-black">45+</p>
-</div>
-<div class="flex min-w-[240px] flex-1 flex-col gap-3 rounded-xl p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined">description</span>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wider">Patents Filed</p>
-<p class="text-slate-900 dark:text-white text-4xl font-black">120+</p>
+<div class="flex flex-col gap-4 p-10 rounded-[2rem] bg-slate-50 dark:bg-slate-950 reveal" style="--order: 3">
+<p class="text-slate-400 dark:text-slate-500 text-xs font-bold uppercase tracking-widest">Patents Filed</p>
+<p class="text-slate-900 dark:text-white text-6xl font-black tracking-tighter counter" data-target="120">0+</p>
 </div>
 </div>
 </div>
 <!-- CTA Section -->
-<div class="px-6 lg:px-20 py-20 text-center">
-<div class="max-w-3xl mx-auto flex flex-col gap-6">
-<h2 class="text-3xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight">Ready to build the future of connectivity?</h2>
-<p class="text-slate-600 dark:text-slate-400 text-lg">Join thousands of enterprises and consumers using FrontierLink to bridge the gap between human intent and machine execution.</p>
-<div class="flex justify-center gap-4 mt-4">
-<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-bold transition-all flex items-center gap-2">
-                            Start Your Journey <span class="material-symbols-outlined">trending_flat</span>
+<div class="px-6 lg:px-20 py-40 text-center bg-white dark:bg-black overflow-hidden">
+<div class="max-w-4xl mx-auto flex flex-col gap-10 reveal">
+<h2 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.05] tracking-tighter">Ready to build the future of connectivity?</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">Join thousands of enterprises and consumers using FrontierLink to bridge the gap between intent and execution.</p>
+<div class="flex justify-center gap-6 mt-4">
+<button class="bg-primary hover:scale-110 active:scale-95 text-white px-10 py-5 rounded-full font-bold transition-all text-lg flex items-center gap-3 shadow-2xl shadow-primary/40">
+                            Get Started <span class="material-symbols-outlined">trending_flat</span>
 </button>
 </div>
 </div>
 </div>
 </main>
 <!-- Footer -->
-<footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-12">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-2xl">hub</span>
-<h2 class="text-slate-900 dark:text-white text-lg font-bold">FrontierLink</h2>
+<footer class="bg-white dark:bg-black border-t border-slate-100 dark:border-slate-900 px-6 lg:px-20 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-4xl">hub</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tighter">FrontierLink</h2>
 </div>
-<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                        Leading the world in smart communication engineering and connected appliances for a more efficient tomorrow.
-                    </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                        Leading the world in smart communication engineering and connected appliances for an efficient tomorrow.
+                    </p>
 </div>
 <div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-4">Quick Links</h4>
-<ul class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Quick Links</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
 <li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Our Product</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">News Hub</a></li>
@@ -270,26 +334,26 @@
 </ul>
 </div>
 <div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-4">Company</h4>
-<ul class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Company</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Our Team</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Press Kit</a></li>
 </ul>
 </div>
 <div>
-<h4 class="text-slate-900 dark:text-white font-bold mb-4">Newsletter</h4>
-<p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Get the latest technology updates directly in your inbox.</p>
-<div class="flex gap-2">
-<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm flex-1 focus:ring-primary" placeholder="Email address" type="email"/>
-<button class="bg-primary text-white p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Newsletter</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-6 leading-relaxed">The latest technology updates delivered directly to your inbox.</p>
+<div class="flex gap-3">
+<input class="bg-slate-100 dark:bg-slate-900 border-none rounded-full px-5 text-sm flex-1 focus:ring-primary h-12" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity flex-shrink-0"><span class="material-symbols-outlined">send</span></button>
 </div>
 </div>
 </div>
-<div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-slate-500 dark:text-slate-400 text-xs">© 2024 FrontierLink Technologies. All rights reserved.</p>
-<div class="flex gap-6 text-slate-500 dark:text-slate-400 text-xs">
+<div class="mt-20 pt-10 border-t border-slate-100 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-400 dark:text-slate-500 text-xs">© 2024 FrontierLink Technologies. All rights reserved.</p>
+<div class="flex gap-8 text-slate-400 dark:text-slate-500 text-xs">
 <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
 <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
 </div>
@@ -297,4 +361,68 @@
 </footer>
 </div>
 </div>
+<script>
+    // Reveal animation on scroll with Intersection Observer for better performance
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                
+                // If it has a counter, start it
+                const counter = entry.target.querySelector('.counter');
+                if (counter) animateCounter(counter);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    // Simple counter animation
+    function animateCounter(el) {
+        if (el.dataset.animated) return;
+        el.dataset.animated = "true";
+        const target = parseInt(el.dataset.target);
+        const suffix = el.innerText.includes('M') ? 'M+' : '+';
+        let count = 0;
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const currentCount = Math.floor(progress * target);
+            el.innerText = currentCount + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+    }
+
+    // Parallax Effect
+    window.addEventListener('mousemove', (e) => {
+        const parallax = document.getElementById('hero-parallax');
+        if (!parallax) return;
+        
+        const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+        const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+        
+        parallax.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 10) {
+            header.classList.add('shadow-sm');
+        } else {
+            header.classList.remove('shadow-sm');
+        }
+    });
+</script>
 </body></html>
+
+看一下这个代码
