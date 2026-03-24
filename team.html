@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Team | FrontierLink Technologies</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans for a modern tech feel -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              secondary: "#64748b",
+              "on-error": "#fff7f7",
+              "surface-bright": "#f9f9fb",
+              "on-primary": "#ffffff",
+              "surface-variant": "#f1f5f9",
+              "on-background": "#0f172a",
+              "outline-variant": "#e2e8f0",
+              "surface": "#ffffff",
+              "on-surface": "#0f172a",
+              "on-surface-variant": "#475569",
+              "background": "#ffffff",
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .portrait-zoom {
+            transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .team-card:hover .portrait-zoom {
+            transform: scale(1.04);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-body selection:bg-primary/10 selection:text-primary">
+<!-- Header (Matching Home Page) -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4 text-primary group cursor-pointer">
+<span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-black leading-tight tracking-tighter">FrontierLink</h2>
+</div>
+<div class="hidden lg:flex items-center gap-10">
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-sm font-semibold text-primary" href="#">Our Team</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="#">Our Product</a>
+<a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="#">News</a><a class="text-sm font-semibold text-slate-500 hover:text-primary transition-colors" href="#">After-sales Service</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-slate-50 border border-slate-200 rounded-full px-4 py-1.5 focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-slate-400 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-slate-400" placeholder="Search..." type="text"/>
+</div>
+<button class="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-primary/25 active:scale-95">
+                Contact Us
+            </button>
+</div>
+</div>
+</nav>
+<main class="pt-40 pb-24">
+<!-- Hero Header -->
+<header class="max-w-7xl mx-auto px-8 mb-32 reveal">
+<span class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 block">Architects of Tomorrow</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.1]">
+            The Minds Behind <br/>
+<span class="text-slate-300">FrontierLink.</span>
+</h1>
+<p class="max-w-2xl text-slate-500 text-lg md:text-xl font-medium leading-relaxed">
+            Meet the engineering core driving the next generation of link technologies at the intersection of aerospace precision and frontier innovation.
+        </p>
+</header>
+<!-- Team Vertical Stack -->
+<section class="max-w-7xl mx-auto px-8 space-y-40">
+<!-- Member 1: Tianxiang Liu -->
+<article class="team-card group flex flex-col lg:flex-row gap-20 reveal items-center">
+<div class="w-full lg:w-1/2 aspect-[4/5] rounded-[2rem] overflow-hidden bg-slate-50 shadow-sm border border-slate-100">
+<img alt="Tianxiang Liu" class="portrait-zoom w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKzVCvi3rK8jcObh5asWoWWWn-Tn_iyw4jm9TFyq_-eGqYPmVWWpAL4M8fOoe7mYESpJF2cE3s0Iw88vP19A4Rg-z0cg1zFHwWvm4jwAyvNXJKTRo69xfFFaua8CCC6JDgma5icFx6DTRPok_A4RDR3sbt5CVYUIhlmVBfI2_LAbV_fBUsu2SWUQhw6AaYxQ0B7jBha5HSnUi9V7IYztjFYZLXumdk2mxR2FvGkCTbw5olE4sZoQQkXJ1WaBa-YamaP1a5qnebC-Bk"/>
+</div>
+<div class="w-full lg:w-1/2 bg-white/70 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-[2rem] shadow-xl space-y-8">
+<header>
+<h2 class="font-headline text-5xl md:text-6xl font-bold mb-3 tracking-tight text-slate-900">Tianxiang Liu</h2>
+<p class="text-primary font-bold tracking-widest uppercase text-sm">Systems Architect</p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">person</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Personal Profile</h4>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Dedicated to optimizing signal integrity and autonomous system frameworks within high-altitude environments.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">school</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Education</h4>
+</div>
+<p class="font-bold text-slate-900 text-sm">Guilin University of Aerospace Technology</p>
+<p class="text-slate-500 text-xs">Bachelor of Engineering</p>
+<p class="text-primary font-bold text-xs">2024 – 2028</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">work</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Experience</h4>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Research Assistant at the Lab of Wireless Communication, focused on terrestrial-to-satellite link stability.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">psychology</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Relevant Skills</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">MATLAB</span>
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">Signal Processing</span>
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">Embedded C</span>
+</div>
+</div>
+<div class="space-y-4 md:col-span-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl" data-weight="fill">military_tech</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Achievements</h4>
+</div>
+<ul class="text-slate-500 text-sm space-y-2 list-none">
+<li class="flex items-center gap-3">
+<span class="h-1.5 w-1.5 bg-primary rounded-full"></span>
+<span>First Prize in "Datang Cup" National Innovation Competition</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="h-1.5 w-1.5 bg-primary rounded-full"></span>
+<span>Top 10% Academic Standing with Honors</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<!-- Member 2: Liqi Pang -->
+<article class="team-card group flex flex-col lg:flex-row-reverse gap-20 reveal items-center">
+<div class="w-full lg:w-1/2 aspect-[4/5] rounded-[2rem] overflow-hidden bg-slate-50 shadow-sm border border-slate-100">
+<img alt="Liqi Pang" class="portrait-zoom w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJv9nQVhxAtZWqUq0NAqGg-IjClKXCwlgt8J94GsWoNEcZo2PtxEeOHR1uFz5BavoDmwwaadTYw4-GWB07GRCUWZuvFMfudeUTTp84I1cLzDKGKTJAjqUoDIm60Af4dv1pt_tqJEmWpV5Zp7tSgNBbGHL6O5yqP0SnzBFCIOg9O9Y6f4wkrLYmx2jzUSgxW0j-Qp3D7nE0HfJLzxpau4kJCuUvnOStDVQgZVp4UtU6qjlF1ScUM3uV-qcObkrnCmOgjqOclsb3kU-n"/>
+</div>
+<div class="w-full lg:w-1/2 bg-white/70 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-[2rem] shadow-xl space-y-8">
+<header>
+<h2 class="font-headline text-5xl md:text-6xl font-bold mb-3 tracking-tight text-slate-900">Liqi Pang</h2>
+<p class="text-primary font-bold tracking-widest uppercase text-sm">Hardware Lead</p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">person</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Personal Profile</h4>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Specializing in high-frequency circuit design and robust hardware prototyping for frontier environments.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">school</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Education</h4>
+</div>
+<p class="font-bold text-slate-900 text-sm">Guilin University of Aerospace Technology</p>
+<p class="text-slate-500 text-xs">Bachelor of Engineering (GPA 3.5/4.0)</p>
+<p class="text-primary font-bold text-xs">2024 – 2028</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">work</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Experience</h4>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Active contributor to student-led aerospace electronic systems development projects and PCB integration.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">psychology</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Relevant Skills</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">PCB Design</span>
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">VHDL</span>
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">Analog Circuits</span>
+</div>
+</div>
+<div class="space-y-4 md:col-span-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl" data-weight="fill">military_tech</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Achievements</h4>
+</div>
+<ul class="text-slate-500 text-sm space-y-2 list-none">
+<li class="flex items-center gap-3">
+<span class="h-1.5 w-1.5 bg-primary rounded-full"></span>
+<span>NUEDC Core Team Member - Regional Recognition</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="h-1.5 w-1.5 bg-primary rounded-full"></span>
+<span>Innovator Fellowship Recipient for Engineering Excellence</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<!-- Member 3: KangYuyang -->
+<article class="team-card group flex flex-col lg:flex-row gap-20 reveal items-center">
+<div class="w-full lg:w-1/2 aspect-[4/5] rounded-[2rem] overflow-hidden bg-slate-50 shadow-sm border border-slate-100">
+<img alt="KangYuyang" class="portrait-zoom w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6XK0W5qcz55crTe_u2CYHi92u4xz9ASw2WQy3a4Im9KNMtQdCVeThR50aZL5vYSM1T96ZBhJKfUWtMZRqMzKuGG8I-1dNg53q6JOFEWdcJb_VKj61OekTnSlhNypCbAhT0fq-N2LK9_ApRyjFiYOteuVjIsZJyM_shDXlUobb4VuNsZ5-35V4H2osZk58hOa02lkdIEDR6KkMkxWAAjnuteGpobYv3MsBT0Vr0E7WocfSfpY5flM71jVkEguu-erN-jLL-t-lfW73"/>
+</div>
+<div class="w-full lg:w-1/2 bg-white/70 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-[2rem] shadow-xl space-y-8">
+<header>
+<h2 class="font-headline text-5xl md:text-6xl font-bold mb-3 tracking-tight text-slate-900">KangYuyang</h2>
+<p class="text-primary font-bold tracking-widest uppercase text-sm">Algorithmic Researcher</p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">person</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Personal Profile</h4>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Passionate about mathematical modeling and computational efficiency in complex networked systems.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">school</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Education</h4>
+</div>
+<p class="font-bold text-slate-900 text-sm">Guilin University of Aerospace Technology</p>
+<p class="text-slate-500 text-xs">Bachelor of Engineering (GPA 3.7/4.0)</p>
+<p class="text-primary font-bold text-xs">2024 – 2028</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">work</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Experience</h4>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Lead contributor to advanced algorithm development for distributed sensor networks and real-time processing.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">psychology</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Relevant Skills</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">Python (NumPy)</span>
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">Data Structures</span>
+<span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">C++</span>
+</div>
+</div>
+<div class="space-y-4 md:col-span-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl" data-weight="fill">military_tech</span>
+<h4 class="font-headline font-bold text-xs uppercase tracking-wider">Achievements</h4>
+</div>
+<ul class="text-slate-500 text-sm space-y-2 list-none">
+<li class="flex items-center gap-3">
+<span class="h-1.5 w-1.5 bg-primary rounded-full"></span>
+<span>National Second Prize in NCEC 2025 Algorithm Track</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="h-1.5 w-1.5 bg-primary rounded-full"></span>
+<span>Advanced Mathematics Merit Scholar with Distinction</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- United by Innovation Section -->
+<section class="max-w-7xl mx-auto px-8 mt-48 reveal">
+<div class="bg-white/40 backdrop-blur-xl border border-white/20 rounded-[2.5rem] p-12 md:p-20 shadow-2xl relative overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 block">Careers</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900">Join the FrontierLink Vision</h2>
+<p class="text-slate-500 text-lg leading-relaxed mb-8">
+                We're looking for passionate engineers and innovators to help us build the next generation of smart connectivity.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-full text-sm font-bold hover:bg-blue-700 transition-all hover:shadow-xl hover:shadow-primary/25 active:scale-95 flex items-center gap-2">
+                    Apply Now
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<button class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full text-sm font-bold hover:bg-slate-50 transition-all active:scale-95">
+                    View Openings
+                </button>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">What we're looking for</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">engineering</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        Strong foundation in Communication Engineering or Embedded Systems.
+                    </p>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">terminal</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        Proficiency in C/C++, MATLAB, or hardware design (PCB/FPGA).
+                    </p>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">diversity_1</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        Passion for human-centered design and reliable technology.
+                    </p>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">translate</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        English proficiency (CET-6 or equivalent preferred).
+                    </p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Matching Home Page) -->
+<footer class="bg-slate-950 text-white pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+<!-- Brand -->
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl text-primary">hub</span>
+<span class="text-xl font-bold tracking-tight font-headline">FrontierLink</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+                    Architecting the future of global connectivity through aerospace-grade link technologies and frontier engineering.
+                </p>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-8 text-primary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Our Products</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">R&amp;D Projects</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Tech Blog</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Join the Team</a></li>
+</ul>
+</div>
+<!-- Company -->
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-8 text-primary">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">About Us</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Media Kit</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Investors</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Contact</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-8 text-primary">Stay Updated</h4>
+<p class="text-slate-400 text-sm mb-6">Get the latest news on aerospace connectivity.</p>
+<div class="flex gap-2">
+<input class="bg-slate-900 border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary hover:bg-blue-700 p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-xs tracking-wide">© 2024 FrontierLink Technologies. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-white text-xs transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-white text-xs transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-white text-xs transition-colors" href="#">Cookie Settings</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Reveal animation observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Simple scroll behavior for header
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 20) {
+            nav.classList.add('bg-white/90', 'py-2');
+            nav.classList.remove('bg-white/70', 'h-20');
+            nav.classList.add('h-16');
+        } else {
+            nav.classList.remove('bg-white/90', 'py-2', 'h-16');
+            nav.classList.add('bg-white/70', 'h-20');
+        }
+    });
+</script>
+<div class="bg-slate-950 py-6 border-t border-slate-900 text-center">
+<p class="text-slate-500 text-xs tracking-wide px-6">
+    This webpage is for educational purposes only and does not represent any real commercial entity.
+  </p>
+</div></body></html>
