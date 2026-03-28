@@ -1,308 +1,398 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
+<html class="light scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Our Team | FrontierLink Technologies</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans for a modern tech feel -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0047AB",
-                        "on-primary": "#ffffff",
-                        "background-light": "#FAF9F6",
-                        "on-tertiary-fixed": "#4e384e",
-                        "error": "#9e3f4e",
-                        "surface": "#f9f9fb",
-                        "on-surface": "#2d3338",
-                        "tertiary-dim": "#634c63",
-                        "on-primary-fixed": "#3f3f41",
-                        "error-dim": "#4f0116",
-                        "on-background": "#2d3338",
-                        "on-surface-variant": "#596065",
-                        "on-secondary-fixed-variant": "#5b5b60",
-                        "surface-variant": "#dde3e9",
-                        "on-tertiary": "#fff7fa",
-                        "on-error": "#fff7f7",
-                        "on-error-container": "#782232",
-                        "tertiary-fixed-dim": "#eacbe7",
-                        "primary-dim": "#535254",
-                        "surface-container": "#ebeef2",
-                        "primary-container": "#e4e2e4",
-                        "primary-fixed": "#e4e2e4",
-                        "outline": "#757c81",
-                        "surface-container-lowest": "#ffffff",
-                        "inverse-primary": "#ffffff",
-                        "tertiary-fixed": "#f8d9f6",
-                        "background": "#FAF9F6",
-                        "secondary-fixed": "#e3e2e7",
-                        "on-primary-fixed-variant": "#5c5b5d",
-                        "on-secondary": "#faf8fe",
-                        "outline-variant": "#acb3b8",
-                        "on-primary-container": "#525154",
-                        "surface-container-highest": "#dde3e9",
-                        "secondary-fixed-dim": "#d5d4d9",
-                        "error-container": "#ff8b9a",
-                        "on-tertiary-fixed-variant": "#6c546c",
-                        "inverse-surface": "#0c0e10",
-                        "surface-container-low": "#f2f4f6",
-                        "on-secondary-container": "#515156",
-                        "on-primary": "#faf7f9",
-                        "inverse-on-surface": "#9c9d9f",
-                        "surface-bright": "#f9f9fb",
-                        "secondary-dim": "#525357",
-                        "on-tertiary-container": "#614a61",
-                        "primary-fixed-dim": "#d6d3d6",
-                        "tertiary": "#6f576f",
-                        "tertiary-container": "#f8d9f6",
-                        "secondary-container": "#e3e2e7",
-                        "surface-tint": "#0047AB",
-                        "on-secondary-fixed": "#3e3f43",
-                        "secondary": "#5e5f63",
-                        "surface-dim": "#d3dbe2",
-                        "surface-container-high": "#e4e9ee"
-                    },
-                    fontFamily: {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              secondary: "#64748b",
+              "on-error": "#fff7f7",
+              "surface-bright": "#f9f9fb",
+              "on-primary": "#ffffff",
+              "surface-variant": "#f1f5f9",
+              "on-background": "#0f172a",
+              "outline-variant": "#e2e8f0",
+              "surface": "#ffffff",
+              "on-surface": "#0f172a",
+              "on-surface-variant": "#475569",
+              "background": "#ffffff",
             },
-        }
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
     </script>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
         }
-        .nav-logo-rotate:hover .logo-icon {
-            transform: rotate(360deg);
+        .portrait-zoom {
+            transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
         }
-        .logo-icon {
-            transition: transform 1000ms ease-in-out;
+        .team-card:hover .portrait-zoom {
+            transform: scale(1.04);
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .profile-zoom:hover img {
-            transform: scale(1.05);
-        }
-        .no-line-separation {
-            box-shadow: inset 0 -1px 0 0 rgba(172, 179, 184, 0.1);
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="bg-background-light text-on-surface font-body selection:bg-tertiary-container selection:text-on-tertiary-container">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-zinc-100">
-<div class="flex justify-between items-center w-full px-6 lg:px-20 py-5 max-w-[1440px] mx-auto">
-<div class="flex items-center gap-2 nav-logo-rotate cursor-pointer">
-<span class="material-symbols-outlined logo-icon text-primary text-3xl" data-icon="hub">hub</span>
-<span class="text-2xl font-bold tracking-[-0.04em] text-zinc-900 font-headline">FrontierLink</span>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-zinc-500 hover:text-primary transition-colors font-medium text-sm" href="#">Home</a>
-<a class="text-zinc-500 hover:text-primary transition-colors font-medium text-sm" href="#">About Us</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-1 text-sm" href="team.html">Our Team</a>
-<a class="text-zinc-500 hover:text-primary transition-colors font-medium text-sm" href="#">Our Product</a>
-<a class="text-zinc-500 hover:text-primary transition-colors font-medium text-sm" href="#">News</a>
-<a class="text-zinc-500 hover:text-primary transition-colors font-medium text-sm" href="#">After-sales Service</a>
-</div>
-<div class="flex items-center gap-4">
-<div class="relative group hidden lg:block">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400 text-sm" data-icon="search">search</span>
-<input class="bg-zinc-100 border-none rounded-full py-2 pl-10 pr-4 text-sm w-48 focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="Search..." type="text"/>
-</div>
-<button class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-blue-700 transition-all duration-300">Get Started</button>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="pt-40 pb-20 px-8 max-w-7xl mx-auto text-center">
-<span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6">Our Visionaries</span>
-<h1 class="text-6xl md:text-8xl font-extrabold font-headline tracking-tighter text-on-surface mb-8 leading-[1.1]">
-        Architecting the <span class="text-outline-variant">Connected</span> Future.
-    </h1>
-<p class="text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-        Meet the engineers bridging the gap between hardware precision and software intelligence at FrontierLink.
-    </p>
+<body class="bg-white text-slate-900 font-body selection:bg-primary/10 selection:text-primary">
+<!-- Header (Matching Home Page) -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 sticky top-0 z-50">
+    <div class="flex items-center gap-10">
+        <div class="flex items-center gap-4 text-primary group cursor-pointer">
+            <span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
+            <h2 class="text-slate-900 dark:text-white text-2xl font-black leading-tight tracking-tighter">FrontierLink</h2>
+        </div>
+        <nav class="hidden xl:flex items-center gap-8">
+            <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="index.html">Home</a>
+            <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">About Us</a>
+            <a class="text-primary text-sm font-bold transition-colors" href="team.html">Our Team</a>
+            <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Product</a>
+            <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">News</a>
+            <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">After-sales Service</a>
+        </nav>
+    </div>
+    <div class="flex flex-1 justify-end gap-6 items-center">
+        <label class="hidden md:flex flex-col min-w-40 h-11 max-w-64">
+            <div class="flex w-full flex-1 items-stretch rounded-full h-full bg-slate-100 dark:bg-slate-900">
+                <div class="text-slate-400 dark:text-slate-500 flex items-center justify-center pl-4">
+                    <span class="material-symbols-outlined text-xl">search</span>
+                </div>
+                <input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search..." value=""/>
+            </div>
+        </label>
+        <button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">
+            Contact
+        </button>
+    </div>
 </header>
-<!-- Team Content - Vertical Stack -->
-<main class="max-w-7xl mx-auto px-8 space-y-32 pb-40">
-<!-- Founder 1: Tianxiang Liu -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-5 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
-<img alt="Tianxiang Liu" class="w-full h-[600px] object-cover transition-transform duration-700" data-alt="Professional portrait of a confident young Asian man in a minimal grey turtleneck against a soft studio backdrop, warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoBx3c64dTgf3N4lBwi_2UVwDXxagHw4lTlkqjy2PZejVmMhCk0oZC6YTRHMc0C6BtQZl3I6UEHH5tjxuf0PhUxo6vfzOk5quk2I4FOKa0bxeAC-eM8kh-mx2XedDii2bnXTdIgMFOzaGVAfC3TA5zV67mreBtzhq8TiAkbpkEGlDK8MxnUrgqkTN70tMzTdPJ6c1aQKlVkcWWMWimUnrEblURNHRwYU_q8tbtJFTSwszCzxmJ6zkMi-LZJYPh-3UQuQ2PxSGvphDL"/>
+<!-- Team Vertical Stack -->
+<section class="max-w-7xl mx-auto px-8 space-y-40">
+<!-- Member 1: Tianxiang Liu -->
+<article class="team-card group flex flex-col lg:flex-row gap-20 reveal items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">person</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Personal Profile</h4>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed">I am a student at GUAT majoring in <span class="text-primary font-semibold">Communication Engineering</span>. Focused on R&D for <span class="text-primary font-semibold">embedded systems</span>, seeking to optimize signal integrity and autonomous frameworks.</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">school</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Education</h4>
+        </div>
+        <p class="font-bold text-slate-900 text-sm">Guilin University of Aerospace Technology</p>
+        <p class="text-slate-500 text-xs">B.Eng. in <span class="text-primary font-medium">Communication Engineering</span></p>
+        <p class="text-primary font-bold text-xs">GPA: 3.9/4.0 | 2024 – 2028</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">work</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Experience</h4>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed">Research Assistant at the Lab of Wireless Communication, focused on <span class="text-primary font-medium">terrestrial-to-satellite</span> link stability and RTOS debugging.</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">psychology</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Relevant Skills</h4>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-primary">STM32 / C</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">RTOS</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">MATLAB</span>
+        </div>
+    </div>
+    <div class="space-y-4 md:col-span-2">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl" data-weight="fill">military_tech</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Achievements</h4>
+        </div>
+        <ul class="text-slate-500 text-sm space-y-2 list-none">
+            <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 bg-primary rounded-full"></span><span><span class="text-primary font-bold">National Scholarship</span> (Top 1% Academic Rank)</span></li>
+            <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 bg-primary rounded-full"></span><span>First Prize in <span class="text-primary font-semibold">"Datang Cup"</span> National Innovation Competition</span></li>
+        </ul>
+    </div>
 </div>
-<div class="lg:col-span-7 space-y-8">
-<div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
-<h2 class="text-4xl font-bold font-headline mb-2">Tianxiang Liu</h2>
-<p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Founding Partner &amp; Embedded Systems Lead</p>
-<div class="space-y-6 text-on-surface-variant">
-<div>
-<h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
-<p>Communication Engineering student at Guilin University of Aerospace Technology, specializing in the intricate architecture of embedded systems and signal processing.</p>
+</article>
+<!-- Member 2: Liqi Pang -->
+<article class="team-card group flex flex-col lg:flex-row-reverse gap-20 reveal items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">person</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Personal Profile</h4>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed">Specializing in <span class="text-primary font-semibold">high-frequency circuit design</span> and robust hardware prototyping. I have pursued every opportunity to master <span class="text-primary font-semibold">PCB layout</span>.</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">school</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Education</h4>
+        </div>
+        <p class="font-bold text-slate-900 text-sm">Guilin University of Aerospace Technology</p>
+        <p class="text-slate-500 text-xs">B.Eng. in <span class="text-primary font-medium">Communication Engineering</span></p>
+        <p class="text-primary font-bold text-xs">GPA: 3.5/4.0 | 2024 – 2028</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">work</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Experience</h4>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed">Active contributor to aerospace electronic systems, focusing on <span class="text-primary font-medium">Analog Circuit</span> integration and power management.</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">psychology</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Relevant Skills</h4>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-primary">Altium Designer</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">VHDL</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">RF Design</span>
+        </div>
+    </div>
+    <div class="space-y-4 md:col-span-2">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl" data-weight="fill">military_tech</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Achievements</h4>
+        </div>
+        <ul class="text-slate-500 text-sm space-y-2 list-none">
+            <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 bg-primary rounded-full"></span><span><span class="text-primary font-semibold">NUEDC</span> Core Team Member - Regional Recognition</span></li>
+            <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 bg-primary rounded-full"></span><span><span class="text-primary font-semibold">CET-6 Certified</span> with technical English proficiency</span></li>
+        </ul>
+    </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<h4 class="text-on-surface font-semibold mb-1">Education</h4>
-<p class="text-sm leading-relaxed">Bachelor (2024-2028). Focused on Signals &amp; Systems, Digital Signal Processing (DSP), and Microcontroller Units (MCU).</p>
+</article>
+<!-- Member 3: KangYuyang -->
+<article class="team-card group flex flex-col lg:flex-row gap-20 reveal items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">person</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Personal Profile</h4>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed">Passionate about <span class="text-primary font-semibold">mathematical modeling</span> and computational efficiency. I aim to apply <span class="text-primary font-semibold">algorithm analysis</span> to solve complex signal paths.</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">school</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Education</h4>
+        </div>
+        <p class="font-bold text-slate-900 text-sm">Guilin University of Aerospace Technology</p>
+        <p class="text-slate-500 text-xs">B.Eng. in <span class="text-primary font-medium">Communication Engineering</span></p>
+        <p class="text-primary font-bold text-xs">GPA: 3.7/4.0 | 2024 – 2028</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">work</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Experience</h4>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed">Lead contributor to advanced algorithm development for <span class="text-primary font-medium">distributed sensor networks</span> and data structures.</p>
+    </div>
+    <div class="space-y-4">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl">psychology</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Relevant Skills</h4>
+        </div>
+        <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-primary">Python / NumPy</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">C++</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase tracking-widest text-slate-600">Modeling</span>
+        </div>
+    </div>
+    <div class="space-y-4 md:col-span-2">
+        <div class="flex items-center gap-2 text-primary">
+            <span class="material-symbols-outlined text-xl" data-weight="fill">military_tech</span>
+            <h4 class="font-headline font-bold text-xs uppercase tracking-wider">Achievements</h4>
+        </div>
+        <ul class="text-slate-500 text-sm space-y-2 list-none">
+            <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 bg-primary rounded-full"></span><span><span class="text-primary font-semibold">National Second Prize</span> in NCEC 2025 Algorithm Track</span></li>
+            <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 bg-primary rounded-full"></span><span><span class="text-primary font-semibold">Merit Scholar</span> with distinction in Advanced Mathematics</span></li>
+        </ul>
+    </div>
 </div>
-<div>
-<h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
-<ul class="text-sm list-disc pl-4 space-y-1">
-<li>1st Prize, 'Datang Cup' National Competition</li>
-<li>Published technical research paper</li>
-<li>Top 10% academic ranking</li>
-</ul>
-</div>
-</div>
-<div class="pt-4 border-t border-outline-variant/10">
-<h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">51/STM32 MCU</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C Language</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">MATLAB</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-6</span>
-</div>
-</div>
-</div>
-</div>
-</div>
+</article>
 </section>
-<!-- Founder 2: Liqi Pang -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-7 order-2 lg:order-1 space-y-8">
-<div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
-<h2 class="text-4xl font-bold font-headline mb-2">Liqi Pang</h2>
-<p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Co-Founder &amp; System Architect</p>
-<div class="space-y-6 text-on-surface-variant">
+<!-- United by Innovation Section -->
+<section class="max-w-7xl mx-auto px-8 mt-48 reveal">
+<div class="bg-white/40 backdrop-blur-xl border border-white/20 rounded-[2.5rem] p-12 md:p-20 shadow-2xl relative overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div>
-<h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
-<p>Dedicated to the design of embedded system architectures, acting as the critical bridge between physical hardware components and high-level software abstraction.</p>
+<span class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 block">Careers</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900">Join the FrontierLink Vision</h2>
+<p class="text-slate-500 text-lg leading-relaxed mb-8">
+                We're looking for passionate engineers and innovators to help us build the next generation of smart connectivity.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-full text-sm font-bold hover:bg-blue-700 transition-all hover:shadow-xl hover:shadow-primary/25 active:scale-95 flex items-center gap-2">
+                    Apply Now
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<button class="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full text-sm font-bold hover:bg-slate-50 transition-all active:scale-95">
+                    View Openings
+                </button>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<h4 class="text-on-surface font-semibold mb-1">Education</h4>
-<p class="text-sm leading-relaxed">Bachelor (2024-2028). GPA 3.5/4.0. Concentration in RTOS and Communication Principles.</p>
 </div>
-<div>
-<h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
-<ul class="text-sm list-disc pl-4 space-y-1">
-<li>National Encouragement Scholarship</li>
-<li>Low-power multi-sensor module lead</li>
-<li>NUEDC Outstanding Individual award</li>
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-slate-900 text-sm uppercase tracking-wider mb-2">What we're looking for</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">engineering</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        Strong foundation in Communication Engineering or Embedded Systems.
+                    </p>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">terminal</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        Proficiency in C/C++, MATLAB, or hardware design (PCB/FPGA).
+                    </p>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">diversity_1</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        Passion for human-centered design and reliable technology.
+                    </p>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 bg-primary/10 p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-primary text-lg">translate</span>
+</div>
+<p class="text-slate-600 text-sm leading-relaxed">
+                        English proficiency (CET-6 or equivalent preferred).
+                    </p>
+</li>
 </ul>
-</div>
-</div>
-<div class="pt-4 border-t border-outline-variant/10">
-<h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">FreeRTOS</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">LoRa / NB-IoT</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">NCRE Level 3</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:col-span-5 order-1 lg:order-2 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
-<img alt="Liqi Pang" class="w-full h-[600px] object-cover transition-transform duration-700" data-alt="Modern portrait of a young professional man in a navy blue suit jacket, sharp lighting, urban studio environment, minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf72TXxFljGIz-klFdrauFUlAkyQygN1QmEys9jB0tlJFxqK3C-081qmDgUlAXu_6V0kjDWskXD3Q4GlNBhxjjF59UeZ4xTDplEnvHsDk1TMWrDXzaYPe4NrgnUrCPCg2Sm0lIhQre0ofsT7uVQlpppyjUvu8rYJNKVH6A7atqDxwMDETHcxEMUootY2gTp0JMLMu7DiNlVPuocnXCwNN9qoRZ4kiXnfhigYn1NfeW2Wt4IL1jkV1S_EHf2mpzNMII3Lnl7Xzb5kR4"/>
-</div>
-</section>
-<!-- Founder 3: Kang Yuyang -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-5 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
-<img alt="Kang Yuyang" class="w-full h-[600px] object-cover transition-transform duration-700" data-alt="Editorial style portrait of a young man with glasses, looking thoughtfully to the side, soft morning light, professional tech founder appearance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2eA3XqVZvPrqKgBkBuLRfTamTd1zebkyOQUXge41JhVbAXc-CfxeUoVgZvJPxMpPSdi013Xl2M8VummeAjENcYDUA9dnHrnFGAE58RkrM5wnS2H6RBklqXsruVYqJgX8MCUNKAmKVfg0eQh2698UBYyDn-Rx_KzZSlnR58e9GiMqTRmEXi6bi3pqzSqTol0kR64RjxzYgOImqfkkc8vkLmlBh45Hn0iNaSzbFVElwnmEMCUxsVBISaf76roUAo-omT0Zqcztl9Cd9"/>
-</div>
-<div class="lg:col-span-7 space-y-8">
-<div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
-<h2 class="text-4xl font-bold font-headline mb-2">Kang Yuyang</h2>
-<p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Co-Founder &amp; Lead Software Engineer</p>
-<div class="space-y-6 text-on-surface-variant">
-<div>
-<h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
-<p>An expert in bottom-level software development and technical communication, ensuring FrontierLink's software is as robust as its hardware.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<h4 class="text-on-surface font-semibold mb-1">Education</h4>
-<p class="text-sm leading-relaxed">Bachelor (2024-2028). GPA 3.7/4.0. Top academic performer in Computer Science tracks.</p>
-</div>
-<div>
-<h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
-<ul class="text-sm list-disc pl-4 space-y-1">
-<li>National 2nd Prize 2025 NCEC</li>
-<li>Developed custom C driver library</li>
-<li>Consistent 3.7/4.0 GPA excellence</li>
-</ul>
-</div>
-</div>
-<div class="pt-4 border-t border-outline-variant/10">
-<h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
-<div class="flex flex-wrap gap-2">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C/C++ Proficiency</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Circuit Design</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-6 Certified</span>
-</div>
-</div>
 </div>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-zinc-50 border-t border-zinc-200">
-<div class="max-w-[1440px] mx-auto px-6 lg:px-20 py-16">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-24 mb-16">
+<!-- Footer (Matching Home Page) -->
+<footer class="bg-slate-950 text-white pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+<!-- Brand -->
 <div class="space-y-6">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-2xl" data-icon="hub">hub</span>
-<span class="text-xl font-bold tracking-tight text-zinc-900 font-headline">FrontierLink</span>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl text-primary">hub</span>
+<span class="text-xl font-bold tracking-tight font-headline">FrontierLink</span>
 </div>
-<p class="text-zinc-500 text-sm leading-relaxed">
-                    Leading the frontier of communication engineering through precise embedded solutions and visionary systems architecture.
+<p class="text-slate-400 text-sm leading-relaxed max-w-xs">
+                    Architecting the future of global connectivity through aerospace-grade link technologies and frontier engineering.
                 </p>
 </div>
+<!-- Quick Links -->
 <div>
-<h4 class="font-bold text-zinc-900 mb-6 font-headline">Quick Links</h4>
-<ul class="space-y-4 text-sm">
-<li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Home</a></li>
-<li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">About Us</a></li>
-<li><a class="text-primary font-bold" href="team.html">Our Team</a></li>
-<li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Our Product</a></li>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-8 text-primary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Our Products</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">R&amp;D Projects</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Tech Blog</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Join the Team</a></li>
 </ul>
 </div>
+<!-- Company -->
 <div>
-<h4 class="font-bold text-zinc-900 mb-6 font-headline">Company Info</h4>
-<ul class="space-y-4 text-sm">
-<li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">News</a></li>
-<li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">After-sales Service</a></li>
-<li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-8 text-primary">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">About Us</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Media Kit</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Investors</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Contact</a></li>
 </ul>
 </div>
-<div class="space-y-6">
-<h4 class="font-bold text-zinc-900 font-headline">Newsletter</h4>
-<p class="text-zinc-500 text-sm">Stay updated with our latest technical breakthroughs.</p>
-<div class="flex flex-col gap-3">
-<input class="bg-white border border-zinc-200 px-4 py-2.5 rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Enter your email" type="email"/>
-<button class="bg-zinc-800 text-white py-2.5 rounded-lg font-medium text-sm hover:bg-zinc-700 transition-colors">Subscribe</button>
+<!-- Newsletter -->
+<div>
+<h4 class="font-bold text-sm uppercase tracking-widest mb-8 text-primary">Stay Updated</h4>
+<p class="text-slate-400 text-sm mb-6">Get the latest news on aerospace connectivity.</p>
+<div class="flex gap-2">
+<input class="bg-slate-900 border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary hover:bg-blue-700 p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
 </div>
 </div>
 </div>
-<div class="pt-8 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-400">
-<p>© 2024 FrontierLink Technologies. All rights reserved.</p>
-<p class="font-medium">This webpage is for educational purposes only and does not represent any real commercial entity.</p>
+<div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-xs tracking-wide">© 2024 FrontierLink Technologies. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-white text-xs transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-white text-xs transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-white text-xs transition-colors" href="#">Cookie Settings</a>
+</div>
 </div>
 </div>
 </footer>
-</body></html>
+<script>
+    // Reveal animation observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Simple scroll behavior for header
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 20) {
+            nav.classList.add('bg-white/90', 'py-2');
+            nav.classList.remove('bg-white/70', 'h-20');
+            nav.classList.add('h-16');
+        } else {
+            nav.classList.remove('bg-white/90', 'py-2', 'h-16');
+            nav.classList.add('bg-white/70', 'h-20');
+        }
+    });
+</script>
+<div class="bg-slate-950 py-6 border-t border-slate-900 text-center">
+<p class="text-slate-500 text-xs tracking-wide px-6">
+    This webpage is for educational purposes only and does not represent any real commercial entity.
+  </p>
+</div></body></html>
