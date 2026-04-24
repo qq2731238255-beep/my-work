@@ -1,384 +1,459 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Our Team | FrontierLink Technologies</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0047AB",
-                        "on-primary": "#ffffff",
-                        "background-light": "#FAF9F6",
-                        "on-tertiary-fixed": "#4e384e",
-                        "error": "#9e3f4e",
-                        "surface": "#f9f9fb",
-                        "on-surface": "#2d3338",
-                        "tertiary-dim": "#634c63",
-                        "on-primary-fixed": "#3f3f41",
-                        "error-dim": "#4f0116",
-                        "on-background": "#2d3338",
-                        "on-surface-variant": "#596065",
-                        "on-secondary-fixed-variant": "#5b5b60",
-                        "surface-variant": "#dde3e9",
-                        "on-tertiary": "#fff7fa",
-                        "on-error": "#fff7f7",
-                        "on-error-container": "#782232",
-                        "tertiary-fixed-dim": "#eacbe7",
-                        "primary-dim": "#535254",
-                        "surface-container": "#ebeef2",
-                        "primary-container": "#e4e2e4",
-                        "primary-fixed": "#e4e2e4",
-                        "outline": "#757c81",
-                        "surface-container-lowest": "#ffffff",
-                        "inverse-primary": "#ffffff",
-                        "tertiary-fixed": "#f8d9f6",
-                        "background": "#FAF9F6",
-                        "secondary-fixed": "#e3e2e7",
-                        "on-primary-fixed-variant": "#5c5b5d",
-                        "on-secondary": "#faf8fe",
-                        "outline-variant": "#acb3b8",
-                        "on-primary-container": "#525154",
-                        "surface-container-highest": "#dde3e9",
-                        "secondary-fixed-dim": "#d5d4d9",
-                        "error-container": "#ff8b9a",
-                        "on-tertiary-fixed-variant": "#6c546c",
-                        "inverse-surface": "#0c0e10",
-                        "surface-container-low": "#f2f4f6",
-                        "on-secondary-container": "#515156",
-                        "on-primary": "#faf7f9",
-                        "inverse-on-surface": "#9c9d9f",
-                        "surface-bright": "#f9f9fb",
-                        "secondary-dim": "#525357",
-                        "on-tertiary-container": "#614a61",
-                        "primary-fixed-dim": "#d6d3d6",
-                        "tertiary": "#6f576f",
-                        "tertiary-container": "#f8d9f6",
-                        "secondary-container": "#e3e2e7",
-                        "surface-tint": "#0047AB",
-                        "on-secondary-fixed": "#3e3f43",
-                        "secondary": "#5e5f63",
-                        "surface-dim": "#d3dbe2",
-                        "surface-container-high": "#e4e9ee"
-                    },
-                    fontFamily: {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        .profile-zoom:hover img {
-            transform: scale(1.05);
-        }
-        .no-line-separation {
-            box-shadow: inset 0 -1px 0 0 rgba(172, 179, 184, 0.1);
-        }
-    </style>
-</head>
-<body class="bg-background-light text-on-surface font-body selection:bg-tertiary-container selection:text-on-tertiary-container">
-
-    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 fixed w-full top-0 z-50">
-        <div class="flex items-center gap-10">
-            <div class="flex items-center gap-4 text-primary group cursor-pointer">
-                <span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
-                <h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tighter">FrontierLink</h2>
-            </div>
-            <nav class="hidden xl:flex items-center gap-8">
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="index.html">Home</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">About Us</a>
-                <a class="text-primary font-bold border-b-2 border-primary pb-1 text-sm transition-colors" href="team.html">Our Team</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Product</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">News</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">After-sales Service</a>
-            </nav>
-        </div>
-        <div class="flex flex-1 justify-end gap-6 items-center">
-            <label class="hidden md:flex flex-col min-w-40 h-11 max-w-64">
-                <div class="flex w-full flex-1 items-stretch rounded-full h-full bg-slate-100 dark:bg-slate-900">
-                    <div class="text-slate-400 dark:text-slate-500 flex items-center justify-center pl-4">
-                        <span class="material-symbols-outlined text-xl">search</span>
-                    </div>
-                    <input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search..." value=""/>
-                </div>
-            </label>
-            <button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">
-                Contact
-            </button>
-        </div>
-    </header>
-
-    <header class="pt-40 pb-20 px-8 max-w-7xl mx-auto text-center">
-        <span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6">Our Visionaries</span>
-        <h1 class="text-6xl md:text-8xl font-extrabold font-headline tracking-tighter text-on-surface mb-8 leading-[1.1]">
-           Our Team.
-        </h1>
-        <p class="text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Meet the engineers bridging the gap between hardware precision and software intelligence at FrontierLink.
-        </p>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-8 space-y-32 pb-40">
-        <!-- 刘天祥 / Tianxiang Liu -->
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-5 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
-                <img alt="Tianxiang Liu" class="w-full h-[600px] object-cover transition-transform duration-700" src="LTX.png"/>
-            </div>
-            <div class="lg:col-span-7 space-y-8">
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
-                    <h2 class="text-4xl font-bold font-headline mb-2">刘天祥</h2>
-                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Founding Partner & Embedded Systems Lead</p>
-                    <div class="space-y-6 text-on-surface-variant">
-                        <div>
-                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
-                            <p>A Communication Engineering graduate from Guilin University of Aerospace Technology, possessing a solid theoretical foundation in electronic information engineering. Proficient in embedded system development and signal processing analysis. Demonstrated strong engineering practice capabilities through technical competitions and academic projects. Capable of reading English technical datasheets and documentation independently.</p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
-                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>GPA: 3.5/4.0 | Core: Signals & Systems, DSP, MCU Principles, Communication Principles, EM Fields, Data Structures.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
-                                <ul class="text-sm list-disc pl-4 space-y-1">
-                                    <li>1st Prize, 'Datang Cup' National University Mobile Communication Technology Challenge (Team Leader)</li>
-                                    <li>Core Member, National Undergraduate Mathematical Contest in Modeling (CUMCM)</li>
-                                    <li>Published technical research paper in communication engineering</li>
-                                    <li>Top 10% academic ranking</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pt-4 border-t border-outline-variant/10">
-                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">51/STM32 MCU</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C Programming</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">MATLAB / Signal Processing</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-4 / Technical Documentation</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Hardware Driver Dev</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 庞黎奇 / Liqi Pang -->
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 order-2 lg:order-1 space-y-8">
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
-                    <h2 class="text-4xl font-bold font-headline mb-2">庞黎奇</h2>
-                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Co-Founder & System Architect</p>
-                    <div class="space-y-6 text-on-surface-variant">
-                        <div>
-                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
-                            <p>A dedicated Communication Engineering graduate with a focus on embedded system architecture and industrial communication protocols. Experienced in developing real-time control systems and optimizing wireless transmission logic through intensive technical competitions. Committed to bridging the gap between hardware and software with robust, low-power solutions.</p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
-                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>GPA: 3.5/4.0 | Core: DSP, Communication Principles, RTOS, Embedded System Architecture.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
-                                <ul class="text-sm list-disc pl-4 space-y-1">
-                                    <li>Core Team Member, National Undergraduate Electronics Design Contest (NUEDC) – STM32 precision control system</li>
-                                    <li>Participant, 'Datang Cup' 5G Network Planning & Protocol Analysis</li>
-                                    <li>Low-power multi-sensor integration lead</li>
-                                    <li>National Encouragement Scholarship for academic excellence</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pt-4 border-t border-outline-variant/10">
-                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">FreeRTOS</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">LoRa / NB-IoT</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C/C++ Programming</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">MATLAB Simulation</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Signal Integrity Analysis</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">NCRE Level 3 (Embedded)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lg:col-span-5 order-1 lg:order-2 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
-                <img alt="Liqi Pang" class="w-full h-[600px] object-cover transition-transform duration-700" src="PLQ.png"/>
-            </div>
-        </section>
-
-        <!-- 康宇扬 / Kang Yuyang -->
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-5 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
-                <img alt="Kang Yuyang" class="w-full h-[600px] object-cover transition-transform duration-700" src="KYY.png"/>
-            </div>
-            <div class="lg:col-span-7 space-y-8">
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
-                    <h2 class="text-4xl font-bold font-headline mb-2">康宇扬</h2>
-                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Co-Founder & Lead Software Engineer</p>
-                    <div class="space-y-6 text-on-surface-variant">
-                        <div>
-                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
-                            <p>A high-achieving Communication Engineering undergraduate with a strong command of C/C++ programming and electronic system design. Distinguished by a GPA of 3.7/4.0 and national-level awards in both technical and English disciplines. Proven ability in hardware-software integration and embedded development, seeking to drive innovation at the intersection of communication and embedded systems.</p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
-                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>GPA: 3.7/4.0 | Core: Communication Principles, Embedded System Design, Circuit Analysis, Electronic Technology.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
-                                <ul class="text-sm list-disc pl-4 space-y-1">
-                                    <li>National Second Prize, National College English Competition (NCEC) 2025</li>
-                                    <li>Team Member, National College Electronic Design Contest – hardware/software integration & MCU debugging</li>
-                                    <li>Consistent GPA 3.7/4.0 (Top Academic Performer)</li>
-                                    <li>Developed custom C driver library for embedded peripherals</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pt-4 border-t border-outline-variant/10">
-                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C/C++ (Proficient)</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Circuit Design & PCB Layout</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">MCU Debugging Tools</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Hardware-Software Integration</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-4 Certified</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 新增成员：Jiang Zhoujun 根据提供的个人信息完整填充，保持布局与庞黎奇相同（内容左，图片右） -->
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 order-2 lg:order-1 space-y-8">
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
-                    <h2 class="text-4xl font-bold font-headline mb-2">蒋周均</h2>
-                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Student Engineer & Web Contributor</p>
-                    <div class="space-y-6 text-on-surface-variant">
-                        <div>
-                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
-                            <p>I am a hard-working student majoring in Communication Engineering at Guilin University of Aerospace Technology. I am eager to learn new knowledge and work well with team members. I am careful and responsible for group work, and I hope to contribute to our team website project.</p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
-                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>Sept. 2024 – Present (Expected 2028)<br/>Main Courses: Circuit Analysis, Analog Electronics, Digital Electronics, Signals and Systems, Computer Networks, Fundamentals of Communication.<br/>Honors/Awards: None</p>
-                            </div>
-                            <div>
-                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
-                                <ul class="text-sm list-disc pl-4 space-y-1">
-                                    <li>Actively contributing to team website development project</li>
-                                    <li>Building foundational skills in front‑end web technologies</li>
-                                    <li>Collaborative team player in academic and extracurricular projects</li>
-                                    <li>Eager to expand technical expertise in communication systems</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="pt-4 border-t border-outline-variant/10">
-                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Microsoft Office (Word, PPT, Excel)</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">HTML & CSS (Basic)</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Circuit Principles & Communication Systems</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Graphic Design & Document Typesetting</span>
-                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-4 (Not taken yet)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lg:col-span-5 order-1 lg:order-2 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
-                <img alt="Jiang Zhoujun" class="w-full h-[600px] object-cover transition-transform duration-700" src="JZZ.png"/>
-            </div>
-        </section>
-
-        <section class="max-w-4xl mx-auto px-8 py-16">
-    <div class="glass-card rounded-[2.5rem] border border-white/20 shadow-xl p-10 md:p-14 text-center backdrop-blur-md bg-white/70 transition-all hover:shadow-2xl">
-        <span class="material-symbols-outlined text-5xl text-primary mb-4">groups</span>
-        <h2 class="text-3xl md:text-4xl font-bold font-headline text-on-surface mb-4">Join Us</h2>
-        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto mb-8">
-            We're always looking for passionate engineers, innovators, and dreamers. Help us shape the connected future.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 hover:scale-105 transition-all">
-                Explore Open Positions
-                <span class="material-symbols-outlined text-xl">arrow_forward</span>
-            </a>
-            <a href="#" class="inline-flex items-center justify-center gap-2 bg-white/80 text-on-surface border border-outline-variant px-8 py-3 rounded-full font-semibold hover:bg-white hover:shadow-md transition-all">
-                Send Speculative Application
-            </a>
-        </div>
-    </div>
-</section>
-    </main>
-
-    <footer class="bg-zinc-50 border-t border-zinc-200">
-        <div class="max-w-[1440px] mx-auto px-6 lg:px-20 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-24 mb-16">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary text-2xl" data-icon="hub">hub</span>
-                        <span class="text-xl font-bold tracking-tight text-zinc-900 font-headline">FrontierLink</span>
-                    </div>
-                    <p class="text-zinc-500 text-sm leading-relaxed">
-                        Leading the frontier of communication engineering through precise embedded solutions and visionary systems architecture.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-zinc-900 mb-6 font-headline">Quick Links</h4>
-                    <ul class="space-y-4 text-sm">
-                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="index.html">Home</a></li>
-                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">About Us</a></li>
-                        <li><a class="text-primary font-bold" href="team.html">Our Team</a></li>
-                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Our Product</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-zinc-900 mb-6 font-headline">Company Info</h4>
-                    <ul class="space-y-4 text-sm">
-                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">News</a></li>
-                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">After-sales Service</a></li>
-                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="space-y-6">
-                    <h4 class="font-bold text-zinc-900 font-headline">Newsletter</h4>
-                    <p class="text-zinc-500 text-sm">Stay updated with our latest technical breakthroughs.</p>
-                    <div class="flex flex-col gap-3">
-                        <input class="bg-white border border-zinc-200 px-4 py-2.5 rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Enter your email" type="email"/>
-                        <button class="bg-zinc-800 text-white py-2.5 rounded-lg font-medium text-sm hover:bg-zinc-700 transition-colors">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-400">
-                <p>© 2024 FrontierLink Technologies. All rights reserved.</p>
-                <p class="font-medium">This webpage is for educational purposes only and does not represent any real commercial entity.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
-```
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="utf-8"/>
+	    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	    <title>Our Team | FrontierLink Technologies</title>
+	    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+	    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+	    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+	    <script id="tailwind-config">
+	        tailwind.config = {
+	            darkMode: "class",
+	            theme: {
+	                extend: {
+	                    colors: {
+	                        "primary": "#0047AB",
+	                        "on-primary": "#ffffff",
+	                        "background-light": "#FAF9F6",
+	                        "on-tertiary-fixed": "#4e384e",
+	                        "error": "#9e3f4e",
+	                        "surface": "#f9f9fb",
+	                        "on-surface": "#2d3338",
+	                        "tertiary-dim": "#634c63",
+	                        "on-primary-fixed": "#3f3f41",
+	                        "error-dim": "#4f0116",
+	                        "on-background": "#2d3338",
+	                        "on-surface-variant": "#596065",
+	                        "on-secondary-fixed-variant": "#5b5b60",
+	                        "surface-variant": "#dde3e9",
+	                        "on-tertiary": "#fff7fa",
+	                        "on-error": "#fff7f7",
+	                        "on-error-container": "#782232",
+	                        "tertiary-fixed-dim": "#eacbe7",
+	                        "primary-dim": "#535254",
+	                        "surface-container": "#ebeef2",
+	                        "primary-container": "#e4e2e4",
+	                        "primary-fixed": "#e4e2e4",
+	                        "outline": "#757c81",
+	                        "surface-container-lowest": "#ffffff",
+	                        "inverse-primary": "#ffffff",
+	                        "tertiary-fixed": "#f8d9f6",
+	                        "background": "#FAF9F6",
+	                        "secondary-fixed": "#e3e2e7",
+	                        "on-primary-fixed-variant": "#5c5b5d",
+	                        "on-secondary": "#faf8fe",
+	                        "outline-variant": "#acb3b8",
+	                        "on-primary-container": "#525154",
+	                        "surface-container-highest": "#dde3e9",
+	                        "secondary-fixed-dim": "#d5d4d9",
+	                        "error-container": "#ff8b9a",
+	                        "on-tertiary-fixed-variant": "#6c546c",
+	                        "inverse-surface": "#0c0e10",
+	                        "surface-container-low": "#f2f4f6",
+	                        "on-secondary-container": "#515156",
+	                        "on-primary": "#faf7f9",
+	                        "inverse-on-surface": "#9c9d9f",
+	                        "surface-bright": "#f9f9fb",
+	                        "secondary-dim": "#525357",
+	                        "on-tertiary-container": "#614a61",
+	                        "primary-fixed-dim": "#d6d3d6",
+	                        "tertiary": "#6f576f",
+	                        "tertiary-container": "#f8d9f6",
+	                        "secondary-container": "#e3e2e7",
+	                        "surface-tint": "#0047AB",
+	                        "on-secondary-fixed": "#3e3f43",
+	                        "secondary": "#5e5f63",
+	                        "surface-dim": "#d3dbe2",
+	                        "surface-container-high": "#e4e9ee"
+	                    },
+	                    fontFamily: {
+	                        "headline": ["Manrope"],
+	                        "body": ["Inter"],
+	                        "label": ["Inter"]
+	                    },
+	                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+	                },
+	            },
+	        }
+	    </script>
+	    <style>
+	        .material-symbols-outlined {
+	            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+	        }
+	        .glass-card {
+	            background: rgba(255, 255, 255, 0.7);
+	            backdrop-filter: blur(20px);
+	            -webkit-backdrop-filter: blur(20px);
+	        }
+	        .profile-zoom:hover img {
+	            transform: scale(1.05);
+	        }
+	        .no-line-separation {
+	            box-shadow: inset 0 -1px 0 0 rgba(172, 179, 184, 0.1);
+	        }
+	    </style>
+	</head>
+	<body class="bg-background-light text-on-surface font-body selection:bg-tertiary-container selection:text-on-tertiary-container">
+	    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 fixed w-full top-0 z-50">
+	        <div class="flex items-center gap-10">
+	            <div class="flex items-center gap-4 text-primary group cursor-pointer">
+	                <span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
+	                <h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tighter">FrontierLink</h2>
+	            </div>
+	            <nav class="hidden xl:flex items-center gap-8">
+	                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="index.html">Home</a>
+	                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">About Us</a>
+	                <a class="text-primary font-bold border-b-2 border-primary pb-1 text-sm transition-colors" href="team.html">Our Team</a>
+	                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">Our Product</a>
+	                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">News</a>
+	                <a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">After-sales Service</a>
+	            </nav>
+	        </div>
+	        <div class="flex flex-1 justify-end gap-6 items-center">
+	            <label class="hidden md:flex flex-col min-w-40 h-11 max-w-64">
+	                <div class="flex w-full flex-1 items-stretch rounded-full h-full bg-slate-100 dark:bg-slate-900">
+	                    <div class="text-slate-400 dark:text-slate-500 flex items-center justify-center pl-4">
+	                        <span class="material-symbols-outlined text-xl">search</span>
+	                    </div>
+	                    <input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search..." value=""/>
+	                </div>
+	            </label>
+	            <button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">
+	                Contact
+	            </button>
+	        </div>
+	    </header>
+	    <header class="pt-40 pb-20 px-8 max-w-7xl mx-auto text-center">
+	        <span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase mb-6">Our Visionaries</span>
+	        <h1 class="text-6xl md:text-8xl font-extrabold font-headline tracking-tighter text-on-surface mb-8 leading-[1.1]">
+	            OUR TEAM
+	        </h1>
+	        <p class="text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+	            Meet the engineers bridging the gap between hardware precision and software intelligence at FrontierLink.
+	        </p>
+	    </header>
+	    <main class="max-w-7xl mx-auto px-8 space-y-32 pb-40">
+	        <!-- 刘天祥 / Tianxiang Liu -->
+	        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+	            <div class="lg:col-span-5 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
+	                <img alt="Tianxiang Liu" class="w-full h-[600px] object-cover transition-transform duration-700" src="LTX.png"/>
+	            </div>
+	            <div class="lg:col-span-7 space-y-8">
+	                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
+	                    <h2 class="text-4xl font-bold font-headline mb-2">刘天祥</h2>
+	                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Founding Partner & Embedded Systems Lead</p>
+	                    <div class="space-y-6 text-on-surface-variant">
+	                        <div>
+	                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
+	                            <p>A Communication Engineering graduate from Guilin University of Aerospace Technology, possessing a solid theoretical foundation in electronic information engineering. Proficient in embedded system development and signal processing analysis. Demonstrated strong engineering practice capabilities through technical competitions and academic projects. Capable of reading English technical datasheets and documentation independently.</p>
+	                        </div>
+	                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
+	                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>GPA: 3.5/4.0 | Core: Signals & Systems, DSP, MCU Principles, Communication Principles, EM Fields, Data Structures.</p>
+	                            </div>
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
+	                                <ul class="text-sm list-disc pl-4 space-y-1">
+	                                    <li>1st Prize, 'Datang Cup' National University Mobile Communication Technology Challenge (Team Leader)</li>
+	                                    <li>Core Member, National Undergraduate Mathematical Contest in Modeling (CUMCM)</li>
+	                                    <li>Published technical research paper in communication engineering</li>
+	                                    <li>Top 10% academic ranking</li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Experience</h4>
+	                            <div class="space-y-4">
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">Portable Signal Spectrum Analyzer</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">Mar 2025 – Jul 2025</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">Core Developer</p>
+	                                    <p class="text-sm leading-relaxed">Developed firmware for an STM32F4-based portable spectrum analyzer. Implemented FFT algorithms in C for real-time signal processing and designed the UI for waveform display on an LCD screen.</p>
+	                                </div>
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">Directional Communication Relay System</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">Aug 2024 – Nov 2024</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">Team Leader</p>
+	                                    <p class="text-sm leading-relaxed">Led a team of 3 in designing a high-frequency directional communication relay. Achieved stable 1km data transmission using custom antenna and RF modules for the National Electronics Design Contest.</p>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
+	                            <div class="flex flex-wrap gap-2">
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">51/STM32 MCU</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C Programming</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">MATLAB / Signal Processing</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-4 / Technical Documentation</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Hardware Driver Dev</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+	        <!-- 庞黎奇 / Liqi Pang -->
+	        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+	            <div class="lg:col-span-7 order-2 lg:order-1 space-y-8">
+	                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
+	                    <h2 class="text-4xl font-bold font-headline mb-2">庞黎奇</h2>
+	                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Co-Founder & System Architect</p>
+	                    <div class="space-y-6 text-on-surface-variant">
+	                        <div>
+	                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
+	                            <p>A dedicated Communication Engineering graduate with a focus on embedded system architecture and industrial communication protocols. Experienced in developing real-time control systems and optimizing wireless transmission logic through intensive technical competitions. Committed to bridging the gap between hardware and software with robust, low-power solutions.</p>
+	                        </div>
+	                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
+	                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>GPA: 3.5/4.0 | Core: DSP, Communication Principles, RTOS, Embedded System Architecture.</p>
+	                            </div>
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
+	                                <ul class="text-sm list-disc pl-4 space-y-1">
+	                                    <li>Core Team Member, National Undergraduate Electronics Design Contest (NUEDC) – STM32 precision control system</li>
+	                                    <li>Participant, 'Datang Cup' 5G Network Planning & Protocol Analysis</li>
+	                                    <li>Low-power multi-sensor integration lead</li>
+	                                    <li>National Encouragement Scholarship for academic excellence</li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Experience</h4>
+	                            <div class="space-y-4">
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">Industrial IoT Gateway based on FreeRTOS</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">Jan 2026 – Present</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">System Architect</p>
+	                                    <p class="text-sm leading-relaxed">Architected a multi-protocol gateway using FreeRTOS, integrating LoRa and NB-IoT for industrial sensor networks. Designed the task scheduling logic ensuring real-time data processing with minimal latency.</p>
+	                                </div>
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">Low-Power Environmental Sensor Node</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">Sept 2025 – Dec 2025</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">Hardware & Software Lead</p>
+	                                    <p class="text-sm leading-relaxed">Developed a low-power sensor node integrating temperature, humidity, and gas sensors. Implemented sleep-wake cycles and LoRaWAN protocol, reducing power consumption by 40% for extended field deployment.</p>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
+	                            <div class="flex flex-wrap gap-2">
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">FreeRTOS</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">LoRa / NB-IoT</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C/C++ Programming</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">MATLAB Simulation</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Signal Integrity Analysis</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">NCRE Level 3 (Embedded)</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="lg:col-span-5 order-1 lg:order-2 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
+	                <img alt="Liqi Pang" class="w-full h-[600px] object-cover transition-transform duration-700" src="PLQ.png"/>
+	            </div>
+	        </section>
+	        <!-- 康宇扬 / Kang Yuyang -->
+	        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+	            <div class="lg:col-span-5 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
+	                <img alt="Kang Yuyang" class="w-full h-[600px] object-cover transition-transform duration-700" src="KYY.png"/>
+	            </div>
+	            <div class="lg:col-span-7 space-y-8">
+	                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
+	                    <h2 class="text-4xl font-bold font-headline mb-2">康宇扬</h2>
+	                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Co-Founder & Lead Software Engineer</p>
+	                    <div class="space-y-6 text-on-surface-variant">
+	                        <div>
+	                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
+	                            <p>A high-achieving Communication Engineering undergraduate with a strong command of C/C++ programming and electronic system design. Distinguished by a GPA of 3.7/4.0 and national-level awards in both technical and English disciplines. Proven ability in hardware-software integration and embedded development, seeking to drive innovation at the intersection of communication and embedded systems.</p>
+	                        </div>
+	                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
+	                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>GPA: 3.7/4.0 | Core: Communication Principles, Embedded System Design, Circuit Analysis, Electronic Technology.</p>
+	                            </div>
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
+	                                <ul class="text-sm list-disc pl-4 space-y-1">
+	                                    <li>National Second Prize, National College English Competition (NCEC) 2025</li>
+	                                    <li>Team Member, National College Electronic Design Contest – hardware/software integration & MCU debugging</li>
+	                                    <li>Consistent GPA 3.7/4.0 (Top Academic Performer)</li>
+	                                    <li>Developed custom C driver library for embedded peripherals</li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Experience</h4>
+	                            <div class="space-y-4">
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">Custom Embedded Peripheral Driver Library</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">Oct 2025 – Feb 2026</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">Lead Developer</p>
+	                                    <p class="text-sm leading-relaxed">Created a modular and well-documented C driver library for common MCU peripherals (SPI, I2C, UART). Optimized memory usage and provided unified APIs, significantly accelerating project prototyping.</p>
+	                                </div>
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">Precision Motor Control System</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">May 2025 – Aug 2025</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">Software & Integration Lead</p>
+	                                    <p class="text-sm leading-relaxed">Implemented PID control algorithms on STM32 for a precision motor control system. Handled hardware-software integration, debugging PCB layout issues, and achieving an angular accuracy of 0.1 degrees.</p>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
+	                            <div class="flex flex-wrap gap-2">
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">C/C++ (Proficient)</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Circuit Design & PCB Layout</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">MCU Debugging Tools</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Hardware-Software Integration</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-4 Certified</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+	        <!-- 蒋周均 / Jiang Zhoujun -->
+	        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+	            <div class="lg:col-span-7 order-2 lg:order-1 space-y-8">
+	                <div class="glass-card p-10 rounded-[2.5rem] border border-white/20 shadow-xl">
+	                    <h2 class="text-4xl font-bold font-headline mb-2">蒋周均</h2>
+	                    <p class="text-primary font-medium tracking-wide mb-6 uppercase text-sm">Student Engineer & Web Contributor</p>
+	                    <div class="space-y-6 text-on-surface-variant">
+	                        <div>
+	                            <h3 class="text-on-surface font-bold text-lg mb-2">Personal Profile</h3>
+	                            <p>I am a hard-working student majoring in Communication Engineering at Guilin University of Aerospace Technology. I am eager to learn new knowledge and work well with team members. I am careful and responsible for group work, and I hope to contribute to our team website project.</p>
+	                        </div>
+	                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Education</h4>
+	                                <p class="text-sm leading-relaxed">Bachelor of Engineering in Communication Engineering, Guilin University of Aerospace Technology.<br/>Sept. 2024 – Present (Expected 2028)<br/>Main Courses: Circuit Analysis, Analog Electronics, Digital Electronics, Signals and Systems, Computer Networks, Fundamentals of Communication.<br/>Honors/Awards: None</p>
+	                            </div>
+	                            <div>
+	                                <h4 class="text-on-surface font-semibold mb-1">Achievements</h4>
+	                                <ul class="text-sm list-disc pl-4 space-y-1">
+	                                    <li>Actively contributing to team website development project</li>
+	                                    <li>Building foundational skills in front‑end web technologies</li>
+	                                    <li>Collaborative team player in academic and extracurricular projects</li>
+	                                    <li>Eager to expand technical expertise in communication systems</li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Experience</h4>
+	                            <div class="space-y-4">
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">FrontierLink Official Team Website</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">Jan 2026 – Present</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">Front-End Contributor</p>
+	                                    <p class="text-sm leading-relaxed">Collaborated in building the team's official website using HTML, CSS, and Tailwind framework. Responsible for layout implementation, responsive design adjustments, and document typesetting for team profiles.</p>
+	                                </div>
+	                                <div>
+	                                    <div class="flex justify-between items-baseline mb-1">
+	                                        <p class="text-sm font-semibold text-on-surface">Baseband Transmission Simulation System</p>
+	                                        <p class="text-xs text-on-surface-variant whitespace-nowrap ml-2">Oct 2025 – Dec 2025</p>
+	                                    </div>
+	                                    <p class="text-xs text-primary mb-1.5">Research Assistant</p>
+	                                    <p class="text-sm leading-relaxed">Assisted in building a baseband transmission simulation model using MATLAB. Conducted simulations for different modulation schemes (ASK, FSK, PSK) and analyzed bit error rate (BER) performance under AWGN channels.</p>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="pt-4 border-t border-outline-variant/10">
+	                            <h4 class="text-on-surface font-semibold mb-3">Technical Expertise</h4>
+	                            <div class="flex flex-wrap gap-2">
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Microsoft Office (Word, PPT, Excel)</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">HTML & CSS (Basic)</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Circuit Principles & Communication Systems</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">Graphic Design & Document Typesetting</span>
+	                                <span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium">CET-4 (Not taken yet)</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="lg:col-span-5 order-1 lg:order-2 profile-zoom overflow-hidden rounded-[2.5rem] bg-surface-container shadow-2xl">
+	                <img alt="Jiang Zhoujun" class="w-full h-[600px] object-cover transition-transform duration-700" src="JZZ.png"/>
+	            </div>
+	        </section>
+	        <section class="max-w-4xl mx-auto px-8 py-16">
+	    <div class="glass-card rounded-[2.5rem] border border-white/20 shadow-xl p-10 md:p-14 text-center backdrop-blur-md bg-white/70 transition-all hover:shadow-2xl">
+	        <span class="material-symbols-outlined text-5xl text-primary mb-4">groups</span>
+	        <h2 class="text-3xl md:text-4xl font-bold font-headline text-on-surface mb-4">Join Us</h2>
+	        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto mb-8">
+	            We're always looking for passionate engineers, innovators, and dreamers. Help us shape the connected future.
+	        </p>
+	        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+	            <a href="#" class="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 hover:scale-105 transition-all">
+	                Explore Open Positions
+	                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+	            </a>
+	            <a href="#" class="inline-flex items-center justify-center gap-2 bg-white/80 text-on-surface border border-outline-variant px-8 py-3 rounded-full font-semibold hover:bg-white hover:shadow-md transition-all">
+	                Send Speculative Application
+	            </a>
+	        </div>
+	    </div>
+	</section>
+	    </main>
+	    <footer class="bg-zinc-50 border-t border-zinc-200">
+	        <div class="max-w-[1440px] mx-auto px-6 lg:px-20 py-16">
+	            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-24 mb-16">
+	                <div class="space-y-6">
+	                    <div class="flex items-center gap-2">
+	                        <span class="material-symbols-outlined text-primary text-2xl" data-icon="hub">hub</span>
+	                        <span class="text-xl font-bold tracking-tight text-zinc-900 font-headline">FrontierLink</span>
+	                    </div>
+	                    <p class="text-zinc-500 text-sm leading-relaxed">
+	                        Leading the frontier of communication engineering through precise embedded solutions and visionary systems architecture.
+	                    </p>
+	                </div>
+	                <div>
+	                    <h4 class="font-bold text-zinc-900 mb-6 font-headline">Quick Links</h4>
+	                    <ul class="space-y-4 text-sm">
+	                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="index.html">Home</a></li>
+	                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">About Us</a></li>
+	                        <li><a class="text-primary font-bold" href="team.html">Our Team</a></li>
+	                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Our Product</a></li>
+	                    </ul>
+	                </div>
+	                <div>
+	                    <h4 class="font-bold text-zinc-900 mb-6 font-headline">Company Info</h4>
+	                    <ul class="space-y-4 text-sm">
+	                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">News</a></li>
+	                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">After-sales Service</a></li>
+	                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+	                        <li><a class="text-zinc-500 hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+	                    </ul>
+	                </div>
+	                <div class="space-y-6">
+	                    <h4 class="font-bold text-zinc-900 font-headline">Newsletter</h4>
+	                    <p class="text-zinc-500 text-sm">Stay updated with our latest technical breakthroughs.</p>
+	                    <div class="flex flex-col gap-3">
+	                        <input class="bg-white border border-zinc-200 px-4 py-2.5 rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Enter your email" type="email"/>
+	                        <button class="bg-zinc-800 text-white py-2.5 rounded-lg font-medium text-sm hover:bg-zinc-700 transition-colors">Subscribe</button>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="pt-8 border-t border-zinc-100 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-400">
+	                <p>© 2024 FrontierLink Technologies. All rights reserved.</p>
+	                <p class="font-medium">This webpage is for educational purposes only and does not represent any real commercial entity.</p>
+	            </div>
+	        </div>
+	    </footer>
+	</body>
+	</html>
