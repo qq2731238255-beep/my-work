@@ -1,0 +1,94 @@
+{
+  "active_plan": "E:\\github\\my-work\\.sisyphus\\plans\\projects-page-products.md",
+  "started_at": "2026-05-07T11:19:10.659Z",
+  "session_ids": [
+    "ses_1fdffd935ffeaXsTVhQ4CqDqrQ"
+  ],
+  "session_origins": {
+    "ses_1fdffd935ffeaXsTVhQ4CqDqrQ": "direct"
+  },
+  "plan_name": "projects-page-products",
+  "agent": "atlas",
+  "task_sessions": {
+    "todo:1": {
+      "task_key": "todo:1",
+      "task_label": "1",
+      "task_title": "Update page metadata and top-level introduction for the real product page",
+      "session_id": "ses_1fdcaf527ffemMs62H8Mcns8MP",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-05-07T11:32:27.956Z"
+    },
+    "todo:2": {
+      "task_key": "todo:2",
+      "task_label": "2",
+      "task_title": "Convert the four generic showcase cards into four stable real-product shells",
+      "session_id": "ses_1fdc8b9bdffeC7U78fWwJCYl6o",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-05-07T11:36:19.829Z"
+    },
+    "todo:3": {
+      "task_key": "todo:3",
+      "task_label": "3",
+      "task_title": "Add towel-gallery support styles and stable gallery hooks",
+      "session_id": "ses_1fdc5bc0effeOi3CHpIeUebpYt",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-05-07T11:38:21.437Z"
+    },
+    "todo:4": {
+      "task_key": "todo:4",
+      "task_label": "4",
+      "task_title": "Fill the humidifier product card with polished copy and the confirmed local image",
+      "session_id": "ses_1fdc2e75dffeMq6wmd61ppW4Qw",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-05-07T11:41:27.885Z"
+    },
+    "todo:8": {
+      "task_key": "todo:8",
+      "task_label": "8",
+      "task_title": "Remove the duplicate standalone humidifier section and preserve the post-showcase flow",
+      "session_id": "ses_1fdbfb2d6ffeWNGBDAuZuUhJqe",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-05-07T11:44:23.599Z"
+    },
+    "todo:9": {
+      "task_key": "todo:9",
+      "task_label": "9",
+      "task_title": "Sweep alt text, labels, image paths, and copy consistency across all four cards",
+      "session_id": "ses_1fdbe845dffeO8frBfV9SlCMZW",
+      "agent": "Sisyphus-Junior",
+      "category": "quick",
+      "updated_at": "2026-05-07T11:47:12.011Z"
+    },
+    "todo:10": {
+      "task_key": "todo:10",
+      "task_label": "10",
+      "task_title": "Run the final in-file consistency and browser layout pass",
+      "session_id": "ses_1fdbbf598ffetIDX7G1rqkzdPs",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-07T11:56:54.177Z"
+    },
+    "final-wave:f1": {
+      "task_key": "final-wave:f1",
+      "task_label": "F1",
+      "task_title": "**Plan Compliance Audit** — `oracle`",
+      "session_id": "ses_1fdb328c9ffeCSSHuZRs7fOI6F",
+      "agent": "oracle",
+      "updated_at": "2026-05-07T12:03:39.129Z"
+    },
+    "final-wave:f3": {
+      "task_key": "final-wave:f3",
+      "task_label": "F3",
+      "task_title": "**Real Manual QA** — `unspecified-high` (+ `playwright` skill)",
+      "session_id": "ses_1fda383e1ffeybZsOHa24gMUdu",
+      "agent": "Sisyphus-Junior",
+      "category": "unspecified-high",
+      "updated_at": "2026-05-07T12:16:10.362Z"
+    }
+  }
+}

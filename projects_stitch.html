@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Products - FrontierLink Technologies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#0047AB",
+                    "background": "#FAF9F6",
+                    "surface": "#FAF9F6",
+                    "on-tertiary-fixed": "#4e384e",
+                    "error-dim": "#4f0116",
+                    "primary-fixed-dim": "#d6d3d6",
+                    "inverse-surface": "#0c0e10",
+                    "secondary-container": "#e3e2e7",
+                    "error": "#9e3f4e",
+                    "surface-tint": "#0047AB",
+                    "primary-fixed": "#e4e2e4",
+                    "on-secondary-fixed": "#3e3f43",
+                    "inverse-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#eacbe7",
+                    "on-background": "#2d3338",
+                    "secondary-dim": "#525357",
+                    "surface-container-high": "#e4e9ee",
+                    "secondary-fixed": "#e3e2e7",
+                    "primary-dim": "#003580",
+                    "on-error-container": "#782232",
+                    "error-container": "#ff8b9a",
+                    "on-surface-variant": "#596065",
+                    "on-surface": "#2d3338",
+                    "primary-container": "#e4e2e4",
+                    "on-tertiary": "#fff7fa",
+                    "outline-variant": "#acb3b8",
+                    "on-tertiary-fixed-variant": "#6c546c",
+                    "outline": "#757c81",
+                    "on-secondary": "#faf8fe",
+                    "on-error": "#fff7f7",
+                    "surface-container-highest": "#dde3e9",
+                    "on-secondary-fixed-variant": "#5b5b60",
+                    "on-primary-fixed": "#3f3f41",
+                    "on-primary-container": "#525154",
+                    "tertiary-container": "#f8d9f6",
+                    "surface-bright": "#f9f9fb",
+                    "on-tertiary-container": "#614a61",
+                    "tertiary": "#6f576f",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-container": "#515156",
+                    "secondary": "#5e5f63",
+                    "on-primary": "#ffffff",
+                    "tertiary-dim": "#634c63",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#ebeef2",
+                    "inverse-on-surface": "#9c9d9f",
+                    "surface-variant": "#dde3e9",
+                    "secondary-fixed-dim": "#d5d4d9",
+                    "tertiary-fixed": "#f8d9f6",
+                    "surface-dim": "#d3dbe2",
+                    "on-primary-fixed-variant": "#5c5b5d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Manrope"
+                    ],
+                    "display": [
+                            "Manrope"
+                    ],
+                    "body": [
+                            "Inter"
+                    ],
+                    "label": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {}
+    },
+        },
+      }
+    </script>
+<style>
+        .ambient-shadow {
+            box-shadow: 0 30px 60px rgba(0, 71, 171, 0.05);
+        }
+        .ghost-border {
+            border: 1px solid rgba(172, 179, 184, 0.15);
+        }
+        
+        @keyframes slideRightFade {
+            from { opacity: 0; transform: translateX(-60px) translateY(20px); }
+            to { opacity: 1; transform: translateX(0) translateY(0); }
+        }
+        @keyframes slideLeftFade {
+            from { opacity: 0; transform: translateX(60px) translateY(20px); }
+            to { opacity: 1; transform: translateX(0) translateY(0); }
+        }
+        
+        .animate-reveal-1 { animation: slideRightFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+        .animate-reveal-2 { animation: slideLeftFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+        .animate-reveal-3 { animation: slideRightFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+        .animate-reveal-4 { animation: slideLeftFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both; }
+        /* Towel gallery styles */
+        .towel-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+        }
+        .towel-main-image {
+            width: 100%;
+            border-radius: 1.5rem;
+            overflow: hidden;
+        }
+        .towel-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .towel-thumb-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .towel-thumb {
+            border-radius: 1rem;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(172, 179, 184, 0.15);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .towel-thumb:hover {
+            transform: scale(1.05);
+        }
+        .towel-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 0.5rem;
+        }
+        @media (max-width: 640px) {
+            .towel-thumb-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl border-b border-white/20 shadow-[0_20px_40px_rgba(45,51,56,0.02)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<!-- Brand -->
+<a class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 flex items-center gap-2 font-headline" href="index.html">
+<span aria-hidden="true" class="material-symbols-outlined transition-transform duration-1000 hover:rotate-180 text-primary" data-icon="hub">hub</span>
+                FrontierLink
+            </a>
+<!-- Navigation Links (Web) -->
+<nav class="hidden md:flex gap-8 items-center font-headline tracking-tight text-sm font-medium">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary transition-colors" href="team.html">Our Team</a>
+<a class="text-primary dark:text-primary font-semibold border-b-2 border-primary pb-1" href="projects_stitch.html">Our Product</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">News</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">After-sales Service</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span aria-hidden="true" class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+<input aria-label="Search" class="pl-9 pr-4 py-2 bg-white/50 backdrop-blur-md ghost-border rounded-full text-sm font-body text-on-surface placeholder-on-surface-variant focus:outline-none focus:border-primary/40 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search" type="text"/>
+</div>
+<a class="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-dim hover:scale-[0.98] transition-all shadow-md shadow-primary/20" href="#">Contact</a>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 relative">
+<!-- Background decorative blobs for frosted glass effect -->
+<div class="fixed top-[20%] left-[-10%] w-[40rem] h-[40rem] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-[10%] right-[-5%] w-[35rem] h-[35rem] bg-blue-200/20 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 py-20 text-center flex flex-col items-center">
+<h1 class="font-display text-[4rem] lg:text-[5rem] font-bold leading-tight tracking-[-0.03em] text-on-surface max-w-5xl mb-6">Innovation Meets Everyday Life</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-3xl mx-auto mb-12">Discover our team's latest innovations — four thoughtfully designed products that bring smart technology into your daily routine.</p>
+</section>
+<!-- Product Showcase (Z-Pattern) -->
+<section class="max-w-7xl mx-auto px-8 py-16">
+<div class="flex flex-col gap-24 lg:gap-32">
+<!-- Product 1: Smart Desktop Humidifier -->
+<div id="product-humidifier" data-product="humidifier" class="animate-reveal-1 bg-white/60 backdrop-blur-2xl border border-white rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row items-center gap-16 ambient-shadow group relative overflow-hidden">
+<div class="lg:w-1/2 z-10 flex flex-col items-start">
+<span class="font-label text-sm uppercase tracking-widest text-primary font-bold mb-4 block">Home &amp; Office</span>
+<h2 class="font-headline text-[3rem] lg:text-[3.5rem] leading-tight font-bold text-on-surface mb-6 group-hover:text-primary transition-colors duration-300">Smart Desktop Humidifier</h2>
+          <div class="space-y-4 mb-10 text-left">
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">I’m KangYuyang, and today I’d like to introduce our new product — the Smart Desktop Humidifier.</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">First, let’s talk about its appearance.</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">It’s made of food-grade plastic, which is safe and eco-friendly. The size is compact: 12cm high, 8cm wide, so it fits perfectly on any desk. It comes in three soft colors: white, light blue, and pink — all simple and stylish for any room.</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">Next, let’s look at its features.</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">It has several great functions. Firstly, it works quietly, so it won’t disturb your work or sleep. It also has a built-in LED night light, which creates a warm atmosphere at night. And it’s very easy to use: just fill the water tank, press the button, and it starts working. It even has an auto-shutoff function when the water runs out, which makes it safe to leave on.</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">Finally, about the price.</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">The selling price is just under £20, which is very competitive for a product with so many features. It’s a great value for money, perfect for students, office workers, and anyone who wants to add some moisture to their daily life.</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">康宇扬</p>
+          </div>
+</div>
+<div class="lg:w-1/2 w-full h-[30rem] lg:h-[40rem] relative flex items-center justify-center">
+<img alt="Smart Desktop Humidifier" class="w-full h-full object-contain mix-blend-multiply drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" src="humidifier.png"/>
+</div>
+</div>
+<!-- Product 2: OmniHub Smart Control Center -->
+<div id="product-control-center" data-product="control-center" class="animate-reveal-2 bg-white/60 backdrop-blur-2xl border border-white rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row-reverse items-center gap-16 ambient-shadow group relative overflow-hidden">
+<div class="lg:w-1/2 z-10 flex flex-col items-start">
+<span class="font-label text-sm uppercase tracking-widest text-primary font-bold mb-4 block">Smart Home</span>
+<h2 class="font-headline text-[3rem] lg:text-[3.5rem] leading-tight font-bold text-on-surface mb-6 group-hover:text-primary transition-colors duration-300">OmniHub Smart Control Center</h2>
+<div class="space-y-4 text-left">
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">Smart Home Product Design Proposal: OmniHub Smart Control Center</p>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">First, let’s look at its appearance.</p>
+            <div>
+              <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Appearance</h3>
+              <p class="font-body text-base text-on-surface-variant leading-relaxed">Crafted from eco-friendly materials, the OmniHub features an aerospace-grade aluminum alloy frame combined with ABS engineering plastic, making it both lightweight and durable. Its matte-finish coating is anti-fingerprint and scratch-resistant, creating a premium tactile experience. The size is compact and space-efficient: 200mm × 150mm × 80mm, suitable for tabletops, entryways, or living room corners without disrupting home aesthetics. It comes in two minimalist color options: Pure White and Deep Space Gray.</p>
+            </div>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">Next, let’s move on to its function.</p>
+            <div>
+              <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Function</h3>
+              <p class="font-body text-base text-on-surface-variant leading-relaxed">This smart control center supports Wi-Fi, Bluetooth, and Zigbee protocols, making it compatible with more than 100 smart devices such as lights, curtains, and security cameras. It offers dual control modes, including a voice assistant with dialect recognition and a 3.5-inch touch screen for instant scene switching. It also supports automated scenarios through custom triggers such as time and sensor data. In addition, the product includes security monitoring with infrared sensors and a 1080p camera for motion detection, real-time mobile alerts, and remote live-view access. It can even track appliance power consumption and generate AI-based energy-saving reports.</p>
+            </div>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">Finally, let’s talk about the price.</p>
+            <div>
+              <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Price</h3>
+              <p class="font-body text-base text-on-surface-variant leading-relaxed">The Basic Edition is priced at ¥799 (about $110 USD), including device integration, voice and touch control, and basic security monitoring. The Pro Edition is ¥1,299 (about $180 USD), adding an environmental sensor kit, local storage expansion, and 3-year free compatibility updates with priority 24/7 technical support.</p>
+            </div>
+            <p class="font-body text-base text-on-surface-variant leading-relaxed">庞黎奇</p>
+          </div>
+</div>
+<div class="lg:w-1/2 w-full h-[30rem] lg:h-[40rem] relative flex items-center justify-center">
+<img alt="OmniHub Smart Control Center" class="w-full h-full object-contain mix-blend-multiply drop-shadow-2xl transition-transform duration-700 group-hover:-translate-y-4 group-hover:scale-105" src="智能中控台.png"/>
+</div>
+</div>
+<!-- Product 3: Wireless Charging Desk Lamp -->
+<div id="product-desk-lamp" data-product="desk-lamp" class="animate-reveal-3 bg-white/60 backdrop-blur-2xl border border-white rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row items-center gap-16 ambient-shadow group relative overflow-hidden">
+<div class="lg:w-1/2 z-10 flex flex-col items-start">
+<span class="font-label text-sm uppercase tracking-widest text-primary font-bold mb-4 block">Home Office</span>
+<h2 class="font-headline text-[3rem] lg:text-[3.5rem] leading-tight font-bold text-on-surface mb-6 group-hover:text-primary transition-colors duration-300">Wireless Charging Desk Lamp</h2>
+<div class="space-y-5">
+  <div>
+    <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Appearance</h3>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">Material       High-quality ABS plastic + aluminum alloy lamp arm</p>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">Size           35cm (H) × 12cm (W) × 10cm (D)</p>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">Color Options   Matte White</p>
+  </div>
+  <div>
+    <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Function &amp; Features</h3>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">This desk lamp is designed for home office and study use, combining practical lighting with modern technology.</p>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">- It features three-level adjustable brightness and warm/cool light modes, so you can easily adjust the light to fit different environments, whether you’re working, reading, or relaxing before bed.</p>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">- The built-in 15W wireless charging pad allows you to charge your Qi-compatible smartphone by simply placing it on the lamp base, no extra cables needed.</p>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">- Thanks to its eye-friendly LED light with no flicker or glare, it helps reduce eye strain during long study or work sessions, protecting your vision effectively.</p>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">- The flexible lamp arm can rotate 360 degrees and adjust the angle freely, letting you direct the light exactly where you need it.</p>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">- With a touch-sensitive control panel on the base, you can turn the lamp on/off, adjust brightness, and switch light modes with just a light tap.</p>
+  </div>
+  <div>
+    <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Price</h3>
+    <p class="font-body text-base text-on-surface-variant leading-relaxed">- Unit Price: $25.99</p>
+  </div>
+</div>
+<div class="pt-4 border-t border-white/20 mt-2">
+  <p class="text-sm text-on-surface-variant font-medium">Prepared by: Jiangzhoujun</p>
+  <p class="text-sm text-on-surface-variant font-medium">蒋周均</p>
+</div>
+</div>
+<div class="lg:w-1/2 w-full h-[30rem] lg:h-[40rem] relative flex items-center justify-center">
+<img alt="Wireless Charging Desk Lamp" class="w-full h-full object-cover mix-blend-multiply drop-shadow-2xl rounded-3xl transition-transform duration-700 group-hover:scale-105" src="台灯.jpg"/>
+</div>
+</div>
+<!-- Product 4: Cotton Antibacterial Towel -->
+<div id="product-towel" data-product="towel" class="animate-reveal-4 bg-white/60 backdrop-blur-2xl border border-white rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row-reverse items-center gap-16 ambient-shadow group relative overflow-hidden">
+  <!-- Text content -->
+  <div class="lg:w-1/2 z-10 flex flex-col items-start">
+    <span class="font-label text-sm uppercase tracking-widest text-primary font-bold mb-4 block">Home Essentials</span>
+    <h2 class="font-headline text-[3rem] lg:text-[3.5rem] leading-tight font-bold text-on-surface mb-6 group-hover:text-primary transition-colors duration-300">Cotton Antibacterial Towel</h2>
+    <div class="space-y-4 text-left">
+      <p class="font-body text-base text-on-surface-variant leading-relaxed">Good afternoon, ladies and gentlemen!</p>
+      <p class="font-body text-base text-on-surface-variant leading-relaxed">I was invited to introduce our new product, cotton antibacterial towel for home use.</p>
+      <p class="font-body text-base text-on-surface-variant leading-relaxed">I will introduce its raw materials, color, function and price in turn, with corresponding pictures.</p>
+      <div>
+        <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Raw Materials</h3>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">This towel is made of high-quality Xinjiang long-staple cotton.</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">It has long and soft fibers, good toughness and no recycled inferior cotton.</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">With safe antibacterial treatment, the product meets Class A textile safety standards, suitable for babies and sensitive skin.</p>
+      </div>
+      <div>
+        <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Product Features</h3>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">1. Super water absorption: The cotton fibers are fluffy and porous with fast water absorption. It can instantly absorb moisture when wiping your face, leaving no sticky discomfort.</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">2. Long-lasting antibacterial property: Professionally tested, it has a 99% antibacterial rate against Staphylococcus aureus and Escherichia coli. It resists bacterial growth and odor generation during long-term use.</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">3. Soft and skin-friendly: The fabric is pre-shrunk and softened by sanding treatment. It feels soft and delicate, will not harden after repeated rubbing, and causes no irritation to the skin.</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">4. Durable and lint-free: Adopting high-density combed weaving technology, the fibers are tightly combined. It does not shed lint, snag or deform during washing and daily use.</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">5. Easy to clean and quick-drying: The fabric is highly breathable, dries fast in the sun and is mildew-proof. It remains fluffy and soft after cleaning for a longer service life.</p>
+      </div>
+      <div>
+        <h3 class="font-inter text-lg font-bold text-on-surface mb-1">Price</h3>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">- Regular towel: 12.9 yuan each</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">- Thickened towel: 16.9 yuan each</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">- 5-piece regular set: 55.9 yuan</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">- 4-piece thickened set: 62.9 yuan</p>
+        <p class="font-body text-base text-on-surface-variant leading-relaxed">刘天祥</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image gallery: 1 main image + 4 thumbnails -->
+  <div class="lg:w-1/2 w-full h-[30rem] lg:h-[40rem] relative flex items-center justify-center z-10">
+    <div class="towel-gallery">
+      <div class="towel-main-image">
+        <img alt="Cotton Antibacterial Towel - Main Product View" src="毛巾总图.jpg"/>
+      </div>
+      <div class="towel-thumb-grid">
+        <div class="towel-thumb">
+          <img alt="Towel Material Detail 1 - Xinjiang Cotton" src="毛巾材料1.jpg"/>
+        </div>
+        <div class="towel-thumb">
+          <img alt="Towel Material Detail 2 - Fabric Close-up" src="毛巾材料2.jpg"/>
+        </div>
+        <div class="towel-thumb">
+          <img alt="Towel Product View 1 - Full Display" src="毛巾产品图.jpg"/>
+        </div>
+        <div class="towel-thumb">
+          <img alt="Towel Product View 2 - Folded Style" src="毛巾产品图2.jpg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Engineering Edge Section -->
+<section class="max-w-7xl mx-auto px-8 py-24">
+<div class="bg-white/50 backdrop-blur-xl border border-white/60 shadow-[0_20px_40px_rgba(0,71,171,0.03)] rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row items-center gap-16 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-white/80 to-transparent -z-10"></div>
+<div class="lg:w-1/2 z-10">
+<h2 class="font-display text-[3rem] font-bold leading-tight tracking-[-0.02em] text-on-surface mb-6">The Engineering Edge</h2>
+<p class="font-body text-lg text-on-surface-variant mb-10 leading-relaxed">Every device is powered by our proprietary communications architecture. Fully Matter certified and built for an interconnected future, ensuring interoperability across all modern standards.</p>
+<ul class="space-y-8">
+<li class="flex items-start gap-5">
+<div class="p-3 bg-white/80 backdrop-blur-sm rounded-2xl text-primary shadow-sm border border-white">
+<span aria-hidden="true" class="material-symbols-outlined text-xl" data-icon="memory">memory</span>
+</div>
+<div>
+<h3 class="font-inter text-xl font-bold text-on-surface">Custom Silicon</h3>
+<p class="text-base text-on-surface-variant mt-2">Optimized for low-power edge computing.</p>
+</div>
+</li>
+<li class="flex items-start gap-5">
+<div class="p-3 bg-white/80 backdrop-blur-sm rounded-2xl text-primary shadow-sm border border-white">
+<span aria-hidden="true" class="material-symbols-outlined text-xl" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h3 class="font-inter text-xl font-bold text-on-surface">Matter Certified</h3>
+<p class="text-base text-on-surface-variant mt-2">Universal compatibility out of the box.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="lg:w-1/2 z-10">
+<div class="aspect-square bg-white/40 backdrop-blur-md border border-white rounded-[3rem] shadow-xl flex items-center justify-center p-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent rounded-[3rem] opacity-50"></div>
+<img alt="Close-up of an STM32 microchip with gold contact pins" class="w-full h-full object-cover rounded-[2rem] mix-blend-multiply relative z-20" src="image_667716821637113.png"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-100 dark:bg-zinc-950 w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-7xl mx-auto px-8 py-24">
+<!-- Brand Column -->
+<div class="flex flex-col gap-4">
+<span class="font-headline font-bold text-zinc-900 dark:text-zinc-50 text-xl flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined" data-icon="hub">hub</span>
+                    FrontierLink
+                </span>
+<p class="text-zinc-600 dark:text-zinc-400 text-sm font-body">Pioneering the next generation of interconnected devices.</p>
+</div>
+<!-- Links Column 1 -->
+<div>
+<h4 class="font-inter text-[0.75rem] uppercase tracking-widest text-zinc-900 dark:text-white mb-6 font-semibold">Quick Links</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="index.html">Home</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="projects_stitch.html">Our Product</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">News</a></li>
+</ul>
+</div>
+<!-- Links Column 2 -->
+<div>
+<h4 class="font-inter text-[0.75rem] uppercase tracking-widest text-zinc-900 dark:text-white mb-6 font-semibold">Company Info</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="about.html">About Us</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="team.html">Our Team</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<!-- Legal Column -->
+<div>
+<h4 class="font-inter text-[0.75rem] uppercase tracking-widest text-zinc-900 dark:text-white mb-6 font-semibold">Legal</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-zinc-500 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="border-t border-zinc-200/50 dark:border-zinc-800/50 py-8 px-8 text-center">
+<p class="text-zinc-500 dark:text-zinc-500 text-xs font-body max-w-2xl mx-auto">© 2026 FrontierLink Technologies. Educational Disclaimer: This platform is intended for technical demonstration and research.</p>
+</div>
+</footer>
+</body></html>

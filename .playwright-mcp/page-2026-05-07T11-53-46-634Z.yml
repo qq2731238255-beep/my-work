@@ -1,0 +1,169 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "hub FrontierLink" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e5]: hub
+        - text: FrontierLink
+      - navigation [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+        - link "About Us" [ref=e8] [cursor=pointer]:
+          - /url: "#"
+        - link "Our Team" [ref=e9] [cursor=pointer]:
+          - /url: "#"
+        - link "Our Product" [ref=e10] [cursor=pointer]:
+          - /url: "#"
+        - link "News" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+        - link "After-sales Service" [ref=e12] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - generic [ref=e15]: search
+          - textbox "Search" [ref=e16]
+        - link "Contact" [ref=e17] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e18]:
+    - generic [ref=e19]:
+      - heading "Innovation Meets Everyday Life" [level=1] [ref=e20]
+      - paragraph [ref=e21]: Discover our team's latest innovations — four thoughtfully designed products that bring smart technology into your daily routine.
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Home & Office
+          - heading "Smart Desktop Humidifier" [level=2] [ref=e27]
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - heading "Appearance" [level=3] [ref=e30]
+              - paragraph [ref=e31]: "Made from food-grade, eco-friendly plastic with a compact design — just 12 cm high and 8 cm wide. Available in three soft colors: white, light blue, and pink."
+            - generic [ref=e32]:
+              - heading "Features" [level=3] [ref=e33]
+              - paragraph [ref=e34]: "Whisper-quiet operation ensures undisturbed work or sleep. The built-in LED night light adds a warm glow after dark. One-button simplicity: fill the tank, press, and start. Auto-shutoff activates when water runs low."
+            - generic [ref=e35]:
+              - heading "Price" [level=3] [ref=e36]
+              - paragraph [ref=e37]: Under £20 — outstanding value for students, office workers, and anyone wanting to add comfort to their daily routine.
+          - paragraph [ref=e39]: — Kang Yuyang, FrontierLink Team
+          - link "Learn More arrow_forward" [ref=e40] [cursor=pointer]:
+            - /url: "#"
+            - text: Learn More
+            - generic [ref=e41]: arrow_forward
+        - img "Smart Desktop Humidifier" [ref=e43]
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: Smart Home
+          - heading "OmniHub Smart Control Center" [level=2] [ref=e47]
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - heading "Design & Build" [level=3] [ref=e50]
+              - paragraph [ref=e51]: Aerospace-grade aluminum alloy frame with matte anti-fingerprint finish. Compact dimensions (200 mm × 150 mm × 80 mm) suit any tabletop or entryway. Available in Pure White and Deep Space Gray.
+            - generic [ref=e52]:
+              - heading "Smart Integration" [level=3] [ref=e53]
+              - paragraph [ref=e54]: Supports Wi-Fi, Bluetooth, and Zigbee, compatible with 100+ smart devices. Unified control through voice assistant (with dialect recognition) and a 3.5-inch touch screen for instant scene switching. Automated scenarios adjust lights and security based on time and sensor data. 1080p camera with infrared sensors monitors motion and sends real-time alerts.
+            - generic [ref=e55]:
+              - heading "Price" [level=3] [ref=e56]
+              - paragraph [ref=e57]:
+                - text: "Basic Edition: ¥799 (~$110) — core integration, voice/touch control, and security monitoring."
+                - text: "Pro Edition: ¥1,299 (~$180) — adds environmental sensors, local storage, and 3-year priority support."
+          - paragraph [ref=e59]: — Pang Liqi, FrontierLink Team
+        - img "OmniHub Smart Control Center" [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e64]: Home Office
+          - heading "Wireless Charging Desk Lamp" [level=2] [ref=e65]
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - heading "Design & Build" [level=3] [ref=e68]
+              - paragraph [ref=e69]: Premium ABS plastic body with an aluminum alloy lamp arm. Compact footprint (35 cm H × 12 cm W × 10 cm D) in a clean matte white finish that complements any modern workspace.
+            - generic [ref=e70]:
+              - heading "Features" [level=3] [ref=e71]
+              - paragraph [ref=e72]: Three brightness levels with warm and cool light modes for work, reading, or relaxing. The built-in 15W wireless charging pad powers your Qi-compatible phone — just place it on the base. Eye-friendly LED with no flicker or glare protects your vision during long sessions. The 360-degree flexible arm directs light exactly where you need it. Touch-sensitive controls on the base let you adjust everything with a light tap.
+            - generic [ref=e73]:
+              - heading "Price" [level=3] [ref=e74]
+              - paragraph [ref=e75]: $25.99 — an affordable all-in-one solution for your home office.
+          - paragraph [ref=e77]: — Jiang Zhoujun, FrontierLink Team
+        - img "Wireless Charging Desk Lamp" [ref=e79]
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]: Home Essentials
+          - heading "Cotton Antibacterial Towel" [level=2] [ref=e83]
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - heading "Raw Materials" [level=3] [ref=e86]
+              - paragraph [ref=e87]: Crafted from premium Xinjiang long-staple cotton with long, soft fibers and excellent toughness. No recycled or inferior materials. Treated with safe antibacterial agents meeting Class A textile safety standards — suitable for babies and sensitive skin.
+            - generic [ref=e88]:
+              - heading "Key Features" [level=3] [ref=e89]
+              - paragraph [ref=e90]:
+                - text: "Super absorbent: Fluffy, porous cotton fibers absorb moisture instantly."
+                - text: "99% antibacterial: Tested effective against Staphylococcus aureus and E. coli."
+                - text: "Soft & skin-friendly: Pre-shrunk and sanded for a delicate touch."
+                - text: "Durable & lint-free: High-density combed weaving ensures no shedding."
+                - text: "Quick-drying: Highly breathable fabric dries fast and resists mildew."
+            - generic [ref=e91]:
+              - heading "Price" [level=3] [ref=e92]
+              - paragraph [ref=e93]:
+                - text: "Regular: ¥12.9 each | Thickened: ¥16.9 each"
+                - text: "5-Piece Set: ¥55.9 | 4-Piece Thickened Set: ¥62.9"
+          - paragraph [ref=e95]: — Liu Tianxiang, FrontierLink Team
+        - generic [ref=e97]:
+          - img "Cotton Antibacterial Towel - Main Product View" [ref=e99]
+          - generic [ref=e100]:
+            - img "Towel Material Detail 1 - Xinjiang Cotton" [ref=e102]
+            - img "Towel Material Detail 2 - Fabric Close-up" [ref=e104]
+            - img "Towel Product View 1 - Full Display" [ref=e106]
+            - img "Towel Product View 2 - Folded Style" [ref=e108]
+    - generic [ref=e112]:
+      - heading "The Engineering Edge" [level=2] [ref=e113]
+      - paragraph [ref=e114]: Every device is powered by our proprietary communications architecture. Fully Matter certified and built for an interconnected future, ensuring interoperability across all modern standards.
+      - list [ref=e115]:
+        - listitem [ref=e116]:
+          - generic [ref=e118]: memory
+          - generic [ref=e119]:
+            - heading "Custom Silicon" [level=3] [ref=e120]
+            - paragraph [ref=e121]: Optimized for low-power edge computing.
+        - listitem [ref=e122]:
+          - generic [ref=e124]: verified_user
+          - generic [ref=e125]:
+            - heading "Matter Certified" [level=3] [ref=e126]
+            - paragraph [ref=e127]: Universal compatibility out of the box.
+  - contentinfo [ref=e131]:
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: hub
+          - text: FrontierLink
+        - paragraph [ref=e136]: Pioneering the next generation of interconnected devices.
+      - generic [ref=e137]:
+        - heading "Quick Links" [level=4] [ref=e138]
+        - list [ref=e139]:
+          - listitem [ref=e140]:
+            - link "Home" [ref=e141] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e142]:
+            - link "Our Product" [ref=e143] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e144]:
+            - link "News" [ref=e145] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e146]:
+        - heading "Company Info" [level=4] [ref=e147]
+        - list [ref=e148]:
+          - listitem [ref=e149]:
+            - link "About Us" [ref=e150] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e151]:
+            - link "Our Team" [ref=e152] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e153]:
+            - link "Careers" [ref=e154] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e155]:
+        - heading "Legal" [level=4] [ref=e156]
+        - list [ref=e157]:
+          - listitem [ref=e158]:
+            - link "Privacy Policy" [ref=e159] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e160]:
+            - link "Terms of Service" [ref=e161] [cursor=pointer]:
+              - /url: "#"
+    - paragraph [ref=e163]: "© 2024 FrontierLink Technologies. Educational Disclaimer: This platform is intended for technical demonstration and research."

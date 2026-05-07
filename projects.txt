@@ -1,0 +1,8 @@
+- 1appearance
+    -1.1 raw material
+    - 1.2size
+    - 1.3color
+- 2function
+    - 2.1feature
+- 3price
+第一大部分三个可以都写也可以选着写 2，3
