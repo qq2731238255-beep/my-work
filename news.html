@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>News - FrontierLink Technologies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Enhanced Reveal on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Staggered children reveal */
+        .stagger-container .reveal {
+            transition-delay: calc(var(--order) * 100ms);
+        }
+
+        /* Premium hover effects */
+        .news-card {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .news-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar - 与 index.html 完全一致 -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 sticky top-0 z-50">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-4 text-primary group cursor-pointer">
+<span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tighter">FrontierLink</h2>
+</div>
+<nav class="hidden xl:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="index.html">Home</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="about.html">About Us</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="team.html">Our Team</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="projects_stitch.html">Our Product</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 text-sm transition-colors" href="news.html">News</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="#">After-sales Service</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-11 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-slate-100 dark:bg-slate-900">
+<div class="text-slate-400 dark:text-slate-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">
+                    Contact
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<section class="px-6 lg:px-20 py-16 lg:py-24">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-3xl mb-14 reveal">
+<p class="text-primary text-sm font-semibold tracking-[0.25em] uppercase mb-4">News Hub</p>
+<h1 class="text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white">Latest Company News</h1>
+<p class="mt-5 text-base lg:text-lg leading-8 text-slate-600 dark:text-slate-300">
+                        Stay updated with the latest invitations, product milestones, and service developments from FrontierLink.
+                    </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 stagger-container">
+<article class="news-card reveal rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8 lg:p-10 shadow-[0_20px_50px_rgba(15,23,42,0.08)] flex flex-col" style="--order: 1;">
+<div class="flex items-center justify-between gap-4 mb-6">
+<span class="inline-flex items-center rounded-full bg-primary/10 text-primary px-4 py-2 text-xs font-bold tracking-[0.2em] uppercase">Invitation</span>
+<span class="text-sm text-slate-400 dark:text-slate-500">June 2026</span>
+</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Letter of Invitation</h2>
+<div class="space-y-4 text-sm lg:text-base leading-8 text-slate-600 dark:text-slate-300">
+<p>Dear Valued Customer,</p>
+<p>We sincerely invite you to visit our production line.</p>
+<p>Your long-term trust and support have meant a lot to us. To let you know more about our production processes, quality control and product manufacturing, we warmly welcome you to come for an on-site tour from June 3rd to 6th 2026.</p>
+<p>During the visit, our staff will show you around in detail and answer your questions.</p>
+<p>Looking forward to your arrival and further pleasant cooperation.</p>
+<p>Yours faithfully,</p>
+<p>Manager Liu</p>
+<p class="font-semibold text-slate-900 dark:text-white">刘天祥</p>
+</div>
+</article>
+<article class="news-card reveal rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8 lg:p-10 shadow-[0_20px_50px_rgba(15,23,42,0.08)] flex flex-col justify-between min-h-[420px]" style="--order: 2;">
+<div>
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-4 py-2 text-xs font-bold tracking-[0.2em] uppercase mb-6">Update</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-5">Production Highlights</h2>
+<p class="text-sm lg:text-base leading-8 text-slate-600 dark:text-slate-300">
+                            More factory and product updates will be published here soon. This panel is reserved for manufacturing progress, quality inspection highlights, and delivery milestones.
+                        </p>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 text-sm text-slate-400 dark:text-slate-500">
+                        Reserved for future news content.
+                    </div>
+</article>
+<article class="news-card reveal rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-8 lg:p-10 shadow-[0_20px_50px_rgba(15,23,42,0.08)] flex flex-col justify-between min-h-[420px]" style="--order: 3;">
+<div>
+<span class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-4 py-2 text-xs font-bold tracking-[0.2em] uppercase mb-6">Notice</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-5">Service Announcements</h2>
+<p class="text-sm lg:text-base leading-8 text-slate-600 dark:text-slate-300">
+                            This panel can be used for after-sales notices, customer support updates, and exhibition or visit announcements as new content becomes available.
+                        </p>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 text-sm text-slate-400 dark:text-slate-500">
+                        Reserved for future news content.
+                    </div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer - 与 index.html 完全一致 -->
+<footer class="bg-white dark:bg-black border-t border-slate-100 dark:border-slate-900 px-6 lg:px-20 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-4xl">hub</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tighter">FrontierLink</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                        Leading the world in smart communication engineering and connected appliances for an efficient tomorrow.
+                    </p>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Quick Links</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="projects_stitch.html">Our Product</a></li>
+<li><a class="text-primary font-bold" href="news.html">News Hub</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Service Center</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Company</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="team.html">Our Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Newsletter</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-6 leading-relaxed">The latest technology updates delivered directly to your inbox.</p>
+<div class="flex gap-3">
+<input class="bg-slate-100 dark:bg-slate-900 border-none rounded-full px-5 text-sm flex-1 focus:ring-primary h-12" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity flex-shrink-0"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-10 border-t border-slate-100 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-400 dark:text-slate-500 text-xs">© 2024 FrontierLink Technologies. All rights reserved.</p>
+<div class="flex gap-8 text-slate-400 dark:text-slate-500 text-xs">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script>
+    // Reveal animation on scroll with Intersection Observer for better performance
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 10) {
+            header.classList.add('shadow-sm');
+        } else {
+            header.classList.remove('shadow-sm');
+        }
+    });
+</script>
+</body></html>
+
+<div class="text-center py-8 text-xs text-slate-400 dark:text-slate-500">
+    (This webpage is for educational/course learning and technical demonstration purposes only and does not represent any real commercial entity.)
+</div>
