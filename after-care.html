@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>After-Sales Service - FrontierLink Technologies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Enhanced Reveal on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px) scale(0.95);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Staggered children reveal */
+        .stagger-container .reveal {
+            transition-delay: calc(var(--order) * 100ms);
+        }
+
+        /* Parallax effect for hero image */
+        .parallax-target {
+            transition: transform 0.2s linear;
+        }
+
+        /* Premium hover effects */
+        .product-card {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-slate-900 bg-white/80 dark:bg-black/80 backdrop-blur-md px-6 lg:px-20 py-5 sticky top-0 z-50">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-4 text-primary group cursor-pointer">
+<span class="material-symbols-outlined text-4xl transform group-hover:rotate-180 transition-transform duration-700">hub</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tighter">FrontierLink</h2>
+</div>
+<nav class="hidden xl:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="index.html">Home</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="about.html">About Us</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="team.html">Our Team</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="projects_stitch.html">Our Product</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-semibold transition-colors" href="news.html">News</a>
+<a class="text-primary dark:text-primary text-sm font-bold transition-colors" href="after-care.html">After-sales Service</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-11 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-slate-100 dark:bg-slate-900">
+<div class="text-slate-400 dark:text-slate-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm font-normal placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-full h-11 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:opacity-90 hover:scale-105 active:scale-95 transition-all">
+                    Contact
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Breadcrumb -->
+<div class="px-6 lg:px-20 py-3 bg-white dark:bg-black border-b border-slate-100 dark:border-slate-900">
+<div class="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-500">
+<a class="hover:text-primary transition-colors" href="index.html">Home</a>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<span class="text-slate-900 dark:text-white font-semibold">Support</span>
+</div>
+</div>
+<!-- After-Sales Service Hero -->
+<div class="px-6 lg:px-20 py-20 lg:py-40 @container bg-white dark:bg-black overflow-hidden reveal">
+<div class="flex flex-col gap-16 @[864px]:flex-row items-center">
+<div class="w-full @[864px]:w-1/2 relative">
+<div class="aspect-square w-full rounded-[2.5rem] overflow-hidden bg-[#F5F5F7] dark:bg-slate-950 flex items-center justify-center animate-float">
+<span class="material-symbols-outlined text-[8rem] text-primary">support_agent</span>
+</div>
+</div>
+<div class="flex flex-col gap-10 @[864px]:w-1/2">
+<div class="flex flex-col gap-6">
+<h1 class="text-slate-900 dark:text-white text-5xl font-black leading-[1.1] tracking-tighter lg:text-7xl">
+                                Your connection. Our commitment.
+                            </h1>
+<p class="text-slate-500 dark:text-slate-400 text-xl leading-relaxed max-w-[540px]">
+                                From warranty checks to live support — access everything you need for your FrontierLink devices in one place.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-5">
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-primary text-white text-base font-bold hover:shadow-2xl hover:shadow-primary/40 transition-all hover:scale-105 active:scale-95">
+                                Request Support
+                            </button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-full h-14 px-8 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-200 dark:hover:bg-slate-800 transition-all">
+                                Track Repair Status
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Installation Services -->
+<div class="px-6 lg:px-20 py-24 @container bg-white dark:bg-black">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 reveal">
+<div class="w-full lg:w-1/2">
+<div class="aspect-[4/3] rounded-[2rem] overflow-hidden bg-cover bg-center transition-transform duration-700 hover:scale-[1.02]" style="background-image: url('mmexport1781413281638.jpg');"></div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">handyman</span>
+</div>
+<h3 class="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Installation Services</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                    Certified engineers offer door-to-door installation for screens, routers and smart home gear. You can make reservations online or by phone to fit your spare time. Standard setup ensures your devices run smoothly from the start.
+                </p>
+</div>
+</div>
+</div>
+<!-- Warranty Services -->
+<div class="px-6 lg:px-20 py-24 @container bg-slate-50 dark:bg-[#080808]">
+<div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20 reveal">
+<div class="w-full lg:w-1/2">
+<div class="aspect-[4/3] rounded-[2rem] overflow-hidden bg-cover bg-center transition-transform duration-700 hover:scale-[1.02]" style="background-image: url('mmexport1781413529363.jpg');"></div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<h3 class="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Warranty Services</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                    All products come with formal electronic warranty after activation. We supply free repairs and genuine spare parts for non-man-made faults during the warranty period. You may check your warranty status anytime on the support page.
+                </p>
+</div>
+</div>
+</div>
+<!-- Online Support -->
+<div class="px-6 lg:px-20 py-24 @container bg-white dark:bg-black">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 reveal">
+<div class="w-full lg:w-1/2">
+<div class="aspect-[4/3] rounded-[2rem] border-2 border-dashed border-slate-300 dark:border-slate-700 flex flex-col items-center justify-center gap-3 bg-slate-50 dark:bg-slate-950 transition-all hover:border-primary hover:border-solid">
+<span class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">support_agent</span>
+<span class="text-xs text-slate-400 dark:text-slate-500 font-medium">Image placeholder</span>
+</div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">headset_mic</span>
+</div>
+<h3 class="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Online Support</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                    A dedicated helpline and live messaging channel put our support staff within reach whenever you need them. Every query follows a standardised grievance redressal procedure — tracked, escalated, and resolved according to our service protocol — so you can call, message, or chat with confidence.
+                </p>
+</div>
+</div>
+</div>
+<!-- Return / Replacement -->
+<div class="px-6 lg:px-20 py-24 @container bg-slate-50 dark:bg-[#080808]">
+<div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20 reveal">
+<div class="w-full lg:w-1/2">
+<div class="aspect-[4/3] rounded-[2rem] border-2 border-dashed border-slate-300 dark:border-slate-700 flex flex-col items-center justify-center gap-3 bg-white dark:bg-slate-950 transition-all hover:border-primary hover:border-solid">
+<span class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">cached</span>
+<span class="text-xs text-slate-400 dark:text-slate-500 font-medium">Image placeholder</span>
+</div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">swap_horiz</span>
+</div>
+<h3 class="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Return / Replacement</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                    For a limited period after purchase, you may request a free replacement or return under our terms and conditions. Depending on the situation, we replace either the entire device or just the defective part. Returns are resolved with store credit, a replacement unit, or a full refund — in line with our published policy.
+                </p>
+</div>
+</div>
+</div>
+<!-- Upgrades -->
+<div class="px-6 lg:px-20 py-24 @container bg-white dark:bg-black">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 reveal">
+<div class="w-full lg:w-1/2">
+<div class="aspect-[4/3] rounded-[2rem] border-2 border-dashed border-slate-300 dark:border-slate-700 flex flex-col items-center justify-center gap-3 bg-slate-50 dark:bg-slate-950 transition-all hover:border-primary hover:border-solid">
+<span class="material-symbols-outlined text-5xl text-slate-300 dark:text-slate-600">cloud_download</span>
+<span class="text-xs text-slate-400 dark:text-slate-500 font-medium">Image placeholder</span>
+</div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<div class="size-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">system_update</span>
+</div>
+<h3 class="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Upgrades</h3>
+<p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                    Software and firmware upgrades are included for a limited period after purchase, keeping your device current and secure. Because hardware stays constant while software advances, each upgrade is validated for compatibility with your specific device — ensuring a smooth experience throughout the supported lifecycle.
+                </p>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="px-6 lg:px-20 py-40 text-center bg-white dark:bg-black overflow-hidden">
+<div class="max-w-4xl mx-auto flex flex-col gap-10 reveal">
+<h2 class="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.05] tracking-tighter">Need help with your device?</h2>
+<p class="text-slate-500 dark:text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">Our support team is ready to assist. Whether it's installation, warranty, or just a question — reach out and we'll get back within 24 hours.</p>
+<div class="flex justify-center gap-6 mt-4">
+<button class="bg-primary hover:scale-110 active:scale-95 text-white px-10 py-5 rounded-full font-bold transition-all text-lg flex items-center gap-3 shadow-2xl shadow-primary/40">
+                        Contact Support <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-black border-t border-slate-100 dark:border-slate-900 px-6 lg:px-20 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-6">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined text-4xl">hub</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold tracking-tighter">FrontierLink</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-xs">
+                        Leading the world in smart communication engineering and connected appliances for an efficient tomorrow.
+                    </p>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Quick Links</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="projects_stitch.html">Our Product</a></li>
+<li><a class="hover:text-primary transition-colors" href="news.html">News Hub</a></li>
+<li><a class="hover:text-primary transition-colors" href="after-care.html">Service Center</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Company</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="team.html">Our Team</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6 tracking-tight">Newsletter</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-6 leading-relaxed">The latest technology updates delivered directly to your inbox.</p>
+<div class="flex gap-3">
+<input class="bg-slate-100 dark:bg-slate-900 border-none rounded-full px-5 text-sm flex-1 focus:ring-primary h-12" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity flex-shrink-0"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-10 border-t border-slate-100 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-400 dark:text-slate-500 text-xs">© 2024 FrontierLink Technologies. All rights reserved.</p>
+<div class="flex gap-8 text-slate-400 dark:text-slate-500 text-xs">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script>
+    // Reveal animation on scroll with Intersection Observer for better performance
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 10) {
+            header.classList.add('shadow-sm');
+        } else {
+            header.classList.remove('shadow-sm');
+        }
+    });
+</script>
+</body></html>
+
+<div class="text-center py-8 text-xs text-slate-400 dark:text-slate-500">
+    (This webpage is for educational/course learning and technical demonstration purposes only and does not represent any real commercial entity.)
+</div>
